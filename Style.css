@@ -3,45 +3,54 @@
     margin:0;
 }
 
-body {
-    font-size: 14px;
-}
-
-p, h1 {
-    left: 135px;
-}
-
-.v1_2 {
+.container {
     width: 100%;
     height: 2191px;
-    background: rgba(255, 255, 255, 1);
-    opacity: 1;
     position: relative;
-    top: 0px;
-    left: 0px;
+}
+
+body {
+    font-family: Roboto;
+}
+
+h1 {
+    position: absolute;
+    font-weight: Bold;
+    font-size: 34px;
+}
+
+p {
+    position: absolute;
+    color: rgb(89, 89, 89);
+    font-size: 16px;
+    left: 135px;
+    text-align: justify; 
+}
+
+h1.tituloAUA {
+    top: 265px;
+    left: 194px;
+}
+
+p.textoAUA {
+    width: 370px;
+    top: 319px;
 }
 
 .v49_11 {
     width: 100%;
     height: 779px;
-    background: url("/imagem/Cachorropt1.png");
-    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    opacity: 1;
     position: absolute;
     top: 1412px;
-    left: 0px;
 }
 
 .v52_55 {
     width: 100%;
     height: 779px;
     background: linear-gradient(to top,rgba(236, 216, 205, 1), rgba(255, 255, 255, 1));
-    opacity: 1;
     position: absolute;
-    top: 0px;
-    left: 0px;
 }
 
 .v33_20 {
@@ -59,10 +68,7 @@ p, h1 {
     width: 220px;
     height: 42px;
     background: rgba(122, 58, 36, 0.75);
-    opacity: 1;
     position: absolute;
-    top: 0px;
-    left: 0px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -75,10 +81,8 @@ p, h1 {
     position: absolute;
     top: 11px;
     left: 48px;
-    font-family: Roboto;
     font-weight: Bold;
     font-size: 16px;
-    opacity: 1;
     text-align: left;
 }
 
@@ -88,21 +92,18 @@ p, h1 {
     position: absolute;
     top: 348px;
     left: 750px;
-    font-family: Roboto;
     font-weight: Regular;
     font-size: 16px;
-    opacity: 1;
     text-align: justified;
 }
 
 .v111_39 {
     width: 310px;
     height: 283px;
-    background: url("/imagem/CAT.png");
+    background: url("/imagem/imagem_meta.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    opacity: 1;
     position: absolute;
     top: 276px;
     left: 315px;
@@ -118,10 +119,8 @@ p, h1 {
     position: absolute;
     top: 276px;
     left: 889px;
-    font-family: Roboto;
     font-weight: Bold;
     font-size: 26px;
-    opacity: 1;
     text-align: left;
 }
 
@@ -131,10 +130,8 @@ p, h1 {
     position: absolute;
     top: 145px;
     left: 609px;
-    font-family: Roboto;
     font-weight: Bold;
     font-size: 42px;
-    opacity: 1;
     text-align: left;
 }
 
@@ -145,20 +142,16 @@ p, h1 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    opacity: 1;
     position: absolute;
     top: 2097px;
-    left: 0px;
 }
 
 .v101_2 {
     width: 100%;
     height: 94px;
     background: rgba(81, 81, 81, 1);
-    opacity: 0.8500000238418579;
+    opacity: 0.85;
     position: absolute;
-    top: 0px;
-    left: 0px;
 }
 
 .v105_21 {
@@ -168,7 +161,6 @@ p, h1 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    opacity: 1;
     position: absolute;
     top: 15px;
     left: 708px;
@@ -179,11 +171,8 @@ p, h1 {
     color: rgba(255, 255, 255, 1);
     position: absolute;
     top: 29px;
-    left: 0px;
-    font-family: Roboto;
     font-weight: Regular;
     font-size: 13px;
-    opacity: 1;
     text-align: justified;
 }
 
@@ -191,12 +180,8 @@ p, h1 {
     width: 95px;
     color: rgba(255, 255, 255, 1);
     position: absolute;
-    top: 0px;
-    left: 0px;
-    font-family: Roboto;
     font-weight: Bold;
     font-size: 16px;
-    opacity: 1;
     text-align: justified;
 }
 
@@ -205,11 +190,8 @@ p, h1 {
     color: rgba(255, 255, 255, 1);
     position: absolute;
     top: 49px;
-    left: 0px;
-    font-family: Roboto;
     font-weight: Regular;
     font-size: 13px;
-    opacity: 1;
     text-align: justified;
 }
 
@@ -220,7 +202,6 @@ p, h1 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    opacity: 1;
     position: absolute;
     top: 15px;
     left: 370px;
@@ -231,11 +212,8 @@ p, h1 {
     color: rgba(255, 255, 255, 1);
     position: absolute;
     top: 49px;
-    left: 0px;
-    font-family: Roboto;
     font-weight: Regular;
     font-size: 13px;
-    opacity: 1;
     text-align: justified;
 }
 
@@ -244,11 +222,8 @@ p, h1 {
     color: rgba(255, 255, 255, 1);
     position: absolute;
     top: 29px;
-    left: 0px;
-    font-family: Roboto;
     font-weight: Regular;
     font-size: 13px;
-    opacity: 1;
     text-align: justified;
 }
 
@@ -256,12 +231,8 @@ p, h1 {
     width: 118px;
     color: rgba(255, 255, 255, 1);
     position: absolute;
-    top: 0px;
-    left: 0px;
-    font-family: Roboto;
     font-weight: Bold;
     font-size: 16px;
-    opacity: 1;
     text-align: justified;
 }
 
@@ -272,7 +243,6 @@ p, h1 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    opacity: 1;
     position: absolute;
     top: 15px;
     left: 1023px;
@@ -283,11 +253,8 @@ p, h1 {
     color: rgba(255, 255, 255, 1);
     position: absolute;
     top: 29px;
-    left: 0px;
-    font-family: Roboto;
     font-weight: Regular;
     font-size: 13px;
-    opacity: 1;
     text-align: justified;
 }
 
@@ -295,12 +262,8 @@ p, h1 {
     width: 42px;
     color: rgba(255, 255, 255, 1);
     position: absolute;
-    top: 0px;
-    left: 0px;
-    font-family: Roboto;
     font-weight: Bold;
     font-size: 16px;
-    opacity: 1;
     text-align: justified;
 }
 
@@ -311,27 +274,21 @@ p, h1 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    opacity: 1;
     position: absolute;
     top: 768px;
-    left: 0px;
 }
 
 .v63_73 {
     width: 100%;
     height: 644px;
     background: rgba(255, 255, 255, 1);
-    opacity: 1;
     position: relative;
-    top: 0px;
-    left: 0px;
 }
 
 .v63_67 {
     width: 90px;
     height: 90px;
     background: rgba(255, 255, 255, 1);
-    opacity: 1;
     position: absolute;
     top: 458px;
     left: 365px;
@@ -340,11 +297,9 @@ p, h1 {
 .v63_68 {
     width: 90px;
     height: 59px;
-    background: url("/imagem/icon\ pessoas.png");
-    opacity: 1;
+    background: url("/imagem/icon_pessoas.png");
     position: absolute;
     top: 15px;
-    left: 0px;
 }
 
 .v49_7 {
@@ -353,10 +308,8 @@ p, h1 {
     position: absolute;
     top: 225px;
     left: 354px;
-    font-family: Roboto;
     font-weight: Bold;
     font-size: 18px;
-    opacity: 1;
     text-align: center;
 }
 
@@ -366,10 +319,8 @@ p, h1 {
     position: absolute;
     top: 225px;
     left: 964px;
-    font-family: Roboto;
     font-weight: Bold;
     font-size: 18px;
-    opacity: 1;
     text-align: center;
 }
 
@@ -379,10 +330,8 @@ p, h1 {
     position: absolute;
     top: 284px;
     left: 230px;
-    font-family: Roboto;
     font-weight: Regular;
     font-size: 16px;
-    opacity: 1;
     text-align: justified;
 }
 
@@ -392,10 +341,8 @@ p, h1 {
     position: absolute;
     top: 284px;
     left: 840px;
-    font-family: Roboto;
     font-weight: Regular;
     font-size: 16px;
-    opacity: 1;
     text-align: justified;
 }
 
@@ -403,7 +350,6 @@ p, h1 {
     width: 90px;
     height: 90px;
     background: rgba(255, 255, 255, 1);
-    opacity: 1;
     position: absolute;
     top: 458px;
     left: 975px;
@@ -412,8 +358,7 @@ p, h1 {
 .v63_70 {
     width: 73px;
     height: 73px;
-    background: url("/imagem/Vector.png");
-    opacity: 1;
+    background: url("/imagem/icon_alvo.png");
     position: absolute;
     top: 9px;
     left: 12px;
@@ -425,10 +370,8 @@ p, h1 {
     position: absolute;
     top: 95px;
     left: 619px;
-    font-family: Roboto;
     font-weight: Bold;
     font-size: 34px;
-    opacity: 1;
     text-align: center;
 }
 
@@ -439,19 +382,13 @@ p, h1 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    opacity: 1;
     position: relative;
-    top: 0px;
-    left: 0px;
 }
 
-.v29_7 {
+.gradientPO {
     width: 100%;
     height: 768px;
-    opacity: 1;
     position: relative;
-    top: 0px;
-    left: 0px;
     background: linear-gradient(rgba(236, 216, 205, 1), rgba(255, 255, 255, 1));
 
 }
@@ -463,10 +400,7 @@ p, h1 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    opacity: 1;
     position: relative;
-    top: 0px;
-    left: 0px;
 }
 
 .v8_3 {
@@ -475,33 +409,9 @@ p, h1 {
     position: absolute;
     top: 12px;
     left: 762px;
-    font-family: Roboto;
     font-weight: Regular;
     font-size: 16px;
-    opacity: 1;
     text-align: left;
-}
-
-.v23_14 {
-    width: 370px;
-    color: rgb(89, 89, 89);
-    position: absolute;
-    top: 319px;
-    left: 135px;
-    font-family: Roboto;
-    font-size: 16px;
-    opacity: 1;
-    text-align: justified;
-}
-
-.v20_6 {
-    color: black;
-    position: absolute;
-    top: 265px;
-    left: 194px;
-    font-family: Roboto;
-    font-weight: Bold;
-    font-size: 34px;
 }
 
 .v24_12 {
@@ -533,9 +443,7 @@ p, h1 {
     position: absolute;
     top: 11px;
     left: 56px;
-    font-family: Roboto;
     font-weight: Bold;
     font-size: 16px;
-    opacity: 1;
     text-align: left;
 }
