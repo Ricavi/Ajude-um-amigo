@@ -83,7 +83,27 @@ main {
 .paragrafo {
   margin-left: 135px;
 }
-.posicao_menu {
+.btn-menu {
   margin-left: 10%;
   margin-top: 2%;
+  display: flex;
+  border: none;
+  background: none;
+  border-radius: 2px;
 }
+.hamburguer {
+  border-top: 3px solid;
+  width: 25px;
+  border-radius: 2px;
+}
+
+.hamburguer::after, .hamburguer::before {
+  width: 25px;
+  height: 3px;
+  background: currentColor;
+  content: '';
+  display: block;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
