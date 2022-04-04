@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Roboto:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hurricane&family=Roboto:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -17,28 +17,16 @@ main {
     rgba(236, 216, 205, 0.3) 100%
   );
   mix-blend-mode: normal;
-  overflow: hidden;
 }
 .cachorro {
   position: relative;
   width: 100vw;
   height: 100vh;
-
   background-size: auto 90%;
   background-image: url(/imagem/Cao.png);
   background-repeat: no-repeat;
   background-position: 90% 100px;
   mix-blend-mode: normal;
-}
-.quem-somos {
-  width: 100%;
-  height: 644px;
-  background-color: #ffffff;
-}
-.txtQuemSomos {
-  padding-top: 100px;
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
 }
 .main {
   position: absolute;
@@ -51,7 +39,6 @@ main {
     #ffffff 100%
   );
 }
-
 .text {
   display: flex;
   flex-direction: column;
@@ -62,7 +49,7 @@ main {
 .titulo {
   margin-top: 440px;
   margin-bottom: 15px;
-  margin-left: 194px;
+  margin-left: 80px;
 }
 .titulo h1 {
   font-family: "IBM Plex Sans Arabic", sans-serif;
@@ -70,9 +57,6 @@ main {
   font-weight: 700;
   font-size: 34px;
   line-height: 40px;
-
-  color: #000000;
-
   mix-blend-mode: normal;
 }
 .text p {
@@ -82,42 +66,99 @@ main {
   font-family: "IBM Plex Sans Arabic", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 19px;
   text-align: justify;
   color: #595959;
 }
 .paragrafo {
-  margin-left: 135px;
+  margin-left: 20px;
 }
 .btn-menu {
-  margin-left: 10%;
-  margin-top: 2%;
+  margin-left: 220px;
+  margin-top: 50px;
   display: flex;
   border: none;
   background: none;
   border-radius: 2px;
 }
 .hamburguer {
-  border-top: 3px solid;
-  width: 25px;
+  border-top: 6px solid;
+  width: 60px;
 }
 .hamburguer::after,
 .hamburguer::before {
-  width: 25px;
-  height: 3px;
+  width: 60px;
+  height: 6px;
   background: currentColor;
   content: "";
   display: block;
-  margin-top: 5px;
+  margin-top: 9px;
 }
 .btn-ong {
+  margin-left: 290px;
+  margin-top: 600px;
+}
+.btn-ong button {
+  font-size: 16px;
+  font-weight: 700;
   font-family: "IBM Plex Sans Arabic", sans-serif;
-  padding: 2px;
-  margin-left: 24%;
-  margin-top: 27%;
+  padding: 11px;
+  padding-left: 56px;
+  padding-right: 56px;
   background-color: #7a3a24;
   border: none;
   border-radius: 5px;
   color: #ffffff;
+}
+.quem-somos {
+  width: 100vw;
+  height: 680px;
+  background-color: #ffffff;
+}
+.tituloQuemSomos {
+  padding-top: 100px;
+  padding-left: 700px;
+  white-space: nowrap;
+}
+.tituloQuemSomos h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+}
+.sobreNos {
+  padding-top: 125px;
+  width: 370px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.sobreNos h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.conteinerHorizontal {
+  display: flex;
+  flex-direction: row;
+}
+.conteinerHorizontal div {
+  margin-left: 120px;
+  margin-right: 50px;
+  text-align: center;
+}
+.iconPessoas {
+  display: block;
+  background-image: url(/imagem/icon_pessoas.png);
+  width: 370px;
+  height: 74px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.iconAlvo {
+  display: block;
+  background-image: url(/imagem/icon_alvo.png);
+  width: 370px;
+  height: 74px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
