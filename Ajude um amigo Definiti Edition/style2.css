@@ -3,9 +3,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
-main {
+.main {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -17,7 +18,6 @@ main {
     rgba(236, 216, 205, 0.3) 100%
   );
   mix-blend-mode: normal;
-  overflow: hidden;
 }
 .cachorro {
   position: relative;
@@ -30,15 +30,7 @@ main {
   mix-blend-mode: normal;
 }
 
-
-
-
-
-
-
-
-
-.main {
+.backgroundpequeno {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -57,7 +49,7 @@ main {
   padding-left: 200px;
 }
 .titulo {
-  margin-top: 440px;
+  margin-top: 390px;
   margin-bottom: 15px;
   margin-left: 80px;
 }
@@ -95,6 +87,7 @@ main {
 .hamburguer {
   border-top: 6px solid;
   width: 60px;
+
 }
 .hamburguer::after,
 .hamburguer::before {
@@ -107,7 +100,7 @@ main {
 }
 .btn-ong {
   margin-left: 290px;
-  margin-top: 600px;
+  margin-top: 540px;
 }
 .btn-ong button {
   font-size: 16px;
@@ -120,6 +113,7 @@ main {
   border: none;
   border-radius: 5px;
   color: #ffffff;
+  transition: ;
 }
 .quem-somos {
   width: 100vw;
@@ -128,7 +122,7 @@ main {
 }
 .tituloQuemSomos {
   padding-top: 100px;
-  padding-left: 700px;
+  padding-left: 650px;
   white-space: nowrap;
 }
 .tituloQuemSomos h1 {
@@ -152,7 +146,7 @@ main {
   flex-direction: row;
 }
 .conteinerHorizontal div {
-  margin-left: 120px;
+  margin-left: 110px;
   margin-right: 50px;
   text-align: center;
 }
@@ -173,18 +167,14 @@ main {
   background-position: center;
 }
 
-
-
-
-
-
 .metaDia {
   position: relative;
   width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
   mix-blend-mode: normal;
-}.main1 {
+}
+.main1 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -194,29 +184,48 @@ main {
     rgba(236, 216, 205, 0) 87.24%,
     #ffffff 100%
   );
-}.text1 {
+}
+.text1 {
   display: flex;
   flex-direction: column;
   position: relative;
   padding-left: 200px;
-}.titulo1 {
-margin-top: 165px;
-  text-align: center;
-}.paragrafo1 {
 }
-.paragrafo1 h1{
+.tituloMeta {
+  margin-top: 165px;
+  padding-left: 650px;
+  white-space: nowrap;
+}
+.paragrafo1 {
+}
+.paragrafo1 h1 {
   margin: 90px 459px 0px 889px;
-
 }
-.paragrafo1 p{
+.paragrafo1 p {
   margin-top: 44px;
   margin-left: 750px;
   margin-right: 320px;
 }
 
+.background{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    #ecd8cd 85.55%,
+    rgba(236, 216, 205, 0.3) 100%
+  );
+  mix-blend-mode: normal;
+}
 
 
-
-
-
-
+footer{
+  position: absolute;
+  width: 100%;
+  height: 94px;  
+  background: #525252;
+  opacity: 0.85;
+}
