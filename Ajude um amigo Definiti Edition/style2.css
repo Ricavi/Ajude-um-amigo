@@ -6,7 +6,7 @@
   max-width: 100%;
 }
 
-.main {
+.gradientCachorro {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -30,7 +30,7 @@
   mix-blend-mode: normal;
 }
 
-.backgroundpequeno {
+.backgroundONGs {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -87,7 +87,6 @@
 .hamburguer {
   border-top: 6px solid;
   width: 60px;
-
 }
 .hamburguer::after,
 .hamburguer::before {
@@ -102,7 +101,7 @@
   margin-left: 290px;
   margin-top: 540px;
 }
-.btn-ong button {
+.btn {
   font-size: 16px;
   font-weight: 700;
   font-family: "IBM Plex Sans Arabic", sans-serif;
@@ -113,21 +112,20 @@
   border: none;
   border-radius: 5px;
   color: #ffffff;
-  transition: ;
 }
 .quem-somos {
   width: 100vw;
-  height: 680px;
+  height: 70vh;
   background-color: #ffffff;
 }
 .tituloQuemSomos {
   padding-top: 100px;
-  padding-left: 650px;
+  padding-left: 620px;
   white-space: nowrap;
 }
 .tituloQuemSomos h1 {
   font-family: "Roboto", sans-serif;
-  font-size: 34px;
+  font-size: 42px;
   font-weight: 700;
 }
 .sobreNos {
@@ -151,7 +149,6 @@
   text-align: center;
 }
 .iconPessoas {
-  display: block;
   background-image: url(/imagem/icon_pessoas.png);
   width: 370px;
   height: 74px;
@@ -159,7 +156,6 @@
   background-position: center;
 }
 .iconAlvo {
-  display: block;
   background-image: url(/imagem/icon_alvo.png);
   width: 370px;
   height: 74px;
@@ -170,11 +166,11 @@
 .metaDia {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   background-repeat: no-repeat;
   mix-blend-mode: normal;
 }
-.main1 {
+.gradientMeta {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -185,29 +181,39 @@
     #ffffff 100%
   );
 }
-.text1 {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding-left: 200px;
-}
+
 .tituloMeta {
-  margin-top: 165px;
+  margin-top: 240px;
   padding-left: 650px;
   white-space: nowrap;
 }
-.paragrafo1 {
+.tituloMeta h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
 }
-.paragrafo1 h1 {
-  margin: 90px 459px 0px 889px;
+.infoAnimal {
+  
 }
-.paragrafo1 p {
-  margin-top: 44px;
-  margin-left: 750px;
-  margin-right: 320px;
+.infoAnimal h1 {
+  font-family: "Roboto", sans-serif;
+  margin: 175px 459px 0px 980px;
 }
-
-.background{
+.infoAnimal p {
+  margin-top: 20px;
+  margin-left: 850px;
+}
+.gato {
+  position: absolute;
+  background-image: url(/imagem/imagem_meta.png);
+  width: 400px;
+  height: 400px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-top: 410px;
+  margin-left: 370px;
+}
+.backgroundMeta {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -220,12 +226,15 @@
   );
   mix-blend-mode: normal;
 }
+.btn-meta {
+  margin-left: 160px;
+  margin-top: 690px;
+}
 
-
-footer{
+footer {
   position: absolute;
   width: 100%;
-  height: 94px;  
+  height: 94px;
   background: #525252;
   opacity: 0.85;
 }
