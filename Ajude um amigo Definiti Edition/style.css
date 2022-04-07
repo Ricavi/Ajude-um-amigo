@@ -76,7 +76,7 @@
 .paragrafo {
   margin-left: 20px;
 }
-.btn-menu {
+.btnMenu {
   margin-left: 220px;
   margin-top: 50px;
   display: flex;
@@ -84,12 +84,12 @@
   background: none;
   border-radius: 2px;
 }
-.hamburguer {
+.estiloBtn {
   border-top: 6px solid;
   width: 60px;
 }
-.hamburguer::after,
-.hamburguer::before {
+.estiloBtn::after,
+.estiloBtn::before {
   width: 60px;
   height: 6px;
   background: currentColor;
@@ -97,7 +97,7 @@
   display: block;
   margin-top: 9px;
 }
-.btn-ong {
+.btnONG {
   margin-left: 290px;
   margin-top: 540px;
 }
@@ -113,7 +113,7 @@
   border-radius: 5px;
   color: #ffffff;
 }
-.quem-somos {
+.quemSomos {
   width: 100vw;
   height: 70vh;
   background-color: #ffffff;
@@ -166,7 +166,7 @@
 .metaDia {
   position: relative;
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   background-repeat: no-repeat;
   mix-blend-mode: normal;
 }
@@ -193,7 +193,6 @@
   font-weight: 700;
 }
 .infoAnimal {
-  
 }
 .infoAnimal h1 {
   font-family: "Roboto", sans-serif;
@@ -226,7 +225,7 @@
   );
   mix-blend-mode: normal;
 }
-.btn-meta {
+.btnMeta {
   margin-left: 160px;
   margin-top: 690px;
 }
@@ -238,5 +237,22 @@ footer {
   background: #525252;
   opacity: 0.85;
 }
-.funcionalidades{
+.funcionalidades {
+  margin-left: 370px;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  text-align: justify;
+}
+.funcionalidades p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.tituloFooter {
+  font-weight: 700;
+  margin: 10px;
+}
+.textoFooter {
 }
