@@ -9,31 +9,75 @@
   <body>
     <main>
       <!--Procurar ONGs-->
-      <img src="./img/imagem_contato.png" alt="" class="teste" />
 
-      <form action="">
-        <label for="">Nome</label>
-        <input type="text" />
 
-        <label for="">Email</label>
-        <input type="text" />
+      
 
-        <label for="">Assunto</label>
-        <input type="text" />
 
-        <label for="">Mensagem</label>
-        <input type="text" />
-      </form>
+
+      <div class="container">
+        <form>
+          <div class="field" tabindex="1">
+            <label for="username">
+              <i class="far fa-user"></i>Nome
+            </label>
+            <input name="username" type="text" placeholder="Nome" required>
+          </div>
+          <div class="field" tabindex="2">
+            <label for="email">
+              <i class="far fa-envelope"></i>Email
+            </label>
+            <input name="email" type="text" placeholder="email@dominio.com" required>
+          </div>
+          <div class="field" tabindex="3">
+            <label for="message">
+              <i class="far fa-edit"></i>Mensagem
+            </label>
+            <textarea name="message" placeholder="Escreva Aqui" required></textarea>
+          </div>
+          <button type="reset">Enviar</button>
+        </form>
+      </div>
+
+      <img src="./img/imagem_contato.png" alt="" class="caoContato" />
+
+
+
+
+
+
 
       <div class="gradientCachorro"></div>
 
+
+
+
+
+
+
+
+
       <footer>
-        <div class="funcionalidades">
-          <p class="tituloFooter">Funcionalidades</p>
-          <p class="textoFooter">Procurar ONGs</p>
-          <p class="textoFooter">Metas</p>
+        <div class="funcionalidadesfooter">
+          <h1>Funcionalidades</h1>
+          <p>Procurar ONGs</p>
+          <p>Metas</p>
+          <p>Meta</p>
         </div>
+
+        <div class="quemSomosfooter">
+          <h1>Quem somos</h1>
+          <p>Sobre nós</p>
+          <p>Objetivo</p>
+        </div>
+
+        <div class="faleConoscofooter">
+          <h1>Fale Conosco</h1>
+          <p>Contato</p>
+        </div>
+
       </footer>
+
     </main>
   </body>
 </html>
