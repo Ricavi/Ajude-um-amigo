@@ -6,6 +6,7 @@
   max-width: 100%;
 }
 
+/*Index*/
 .gradientCachorro {
   display: flex;
   flex-direction: column;
@@ -41,6 +42,7 @@
     #ffffff 100%
   );
 }
+/*Padrão usado na maioria os textos*/
 .text {
   display: flex;
   flex-direction: column;
@@ -54,7 +56,7 @@
   margin-left: 80px;
 }
 .titulo h1 {
-  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 34px;
@@ -101,10 +103,11 @@
   margin-left: 290px;
   margin-top: 540px;
 }
+/*Estilo de botão padrão*/
 .btn {
   font-size: 16px;
   font-weight: 700;
-  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 11px;
   padding-left: 56px;
   padding-right: 56px;
@@ -113,6 +116,7 @@
   border-radius: 5px;
   color: #ffffff;
 }
+/*Quem somos*/
 .quemSomos {
   width: 100vw;
   height: 70vh;
@@ -143,8 +147,7 @@
   display: flex;
   flex-direction: row;
 }
-.conteinerHorizontal div,
-header {
+.conteinerHorizontal div {
   margin-left: 110px;
   margin-right: 50px;
   text-align: center;
@@ -163,7 +166,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
 }
-
+/*Meta do dia*/
 .metaDia {
   position: relative;
   width: 100vw;
@@ -182,7 +185,6 @@ header {
     #ffffff 100%
   );
 }
-
 .tituloMeta {
   margin-top: 240px;
   padding-left: 650px;
@@ -193,7 +195,6 @@ header {
   font-size: 42px;
   font-weight: 700;
 }
-
 .infoAnimal h1 {
   font-family: "Roboto", sans-serif;
   margin: 175px 459px 0px 980px;
@@ -229,7 +230,6 @@ header {
   margin-left: 160px;
   margin-top: 690px;
 }
-
 footer {
   position: absolute;
   width: 100%;
@@ -242,17 +242,63 @@ footer {
   flex-direction: row;
   color: #ffffff;
 }
-footer div{
+footer div {
   padding-top: 9px;
   margin-left: 390px;
   text-align: left;
 }
-footer h1{
+footer h1 {
   padding-bottom: 5px;
   font-weight: 400;
   font-size: 18px;
 }
-footer p{
+footer p {
   font-weight: 200;
   font-size: 13px;
+}
+/*Fale conosco*/
+.fundoPadrao {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  height: 843px;
+  background: #edd9ce;
+  opacity: 0.85;
+  mix-blend-mode: normal;
+}
+.chachorroFone {
+  position: absolute;
+  z-index: 1;
+  width: 520px;
+  height: 573px;
+  margin-top: 270px;
+  margin-left: 150px;
+}
+form {
+  position: absolute;
+  z-index: 1;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-end;
+}
+form label{
+  padding-right: 10px;
+  font-weight: 400;
+  font-size: 21px;
+  align-items: center;
+}
+form input{
+  border-radius: 5px;
+  border: none;
+  width: 350px;
+  height: 31px;
+}
+.formContato{
+  
+}
+.formContato div{
+  padding-top: 10px;
+  
 }
