@@ -1,0 +1,203 @@
+.main img {
+  max-width: 600px;
+}
+
+.main {
+  background: linear-gradient(
+    180deg,
+    #ecd8cd 85.55%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  mix-blend-mode: normal;
+}
+.text button {
+  background-color: #7a3a24;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.quemSomos {
+  width: 100vw;
+  background-color: #ffffff;
+}
+.tituloQuemSomos {
+  padding-top: 100px;
+  white-space: nowrap;
+  text-align: center;
+}
+.tituloQuemSomos h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+}
+.sobreNos {
+  padding-top: 125px;
+  width: 370px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.sobreNos h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.conteinerHorizontal {
+  display: flex;
+  justify-content: space-around;
+}
+.conteinerHorizontal div {
+  text-align: center;
+}
+.aa {
+  max-width: 370px;
+}
+.metaDia {
+  position: relative;
+  padding-bottom: 100px;
+  background-repeat: no-repeat;
+  mix-blend-mode: normal;
+}
+
+.tituloMeta {
+  white-space: nowrap;
+}
+.tituloMeta h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+.infoAnimal h1 {
+  font-family: "Roboto", sans-serif;
+}
+.infoAnimal p {
+  margin-top: 20px;
+}
+.gato {
+  position: absolute;
+  background-image: url("../img/imagem_meta.png");
+  width: 400px;
+  height: 400px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-top: 410px;
+  margin-left: 370px;
+}
+.backgroundMeta {
+  background: linear-gradient(
+    to top,
+    #ecd8cd 85.55%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  mix-blend-mode: normal;
+}
+.btnMeta {
+  margin-left: 160px;
+  margin-top: 690px;
+}
+.meta img {
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+}
+.btn-am {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer {
+  background: #525252;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  display: flex;
+  color: #ffffff;
+  justify-content: space-around;
+}
+footer div {
+  padding-top: 9px;
+}
+footer h1 {
+  padding-bottom: 5px;
+  font-weight: 400;
+  font-size: 18px;
+}
+footer p {
+  font-weight: 200;
+  font-size: 13px;
+}
+.altura {
+  height: 168px;
+}
+.centralizar {
+  display: flex !important;
+  width: max-content;
+  margin: auto;
+}
+.meio {
+  display: flex;
+  margin-left: auto;
+}
+.overflow {
+  height: 100px;
+  overflow: auto;
+}
+.tamanho {
+  padding-bottom: 120px;
+}
+.tituloMeta {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  padding-bottom: 20px;
+}
+.tamanhoIcons {
+  font-size: 25px;
+}
+.plus {
+  font-size: 100px;
+}
+.adicionar {
+  margin-top: 60%;
+  display: flex !important;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+label {
+  width: 80px;
+}
+.btn-ctt {
+  display: flex;
+  margin: auto;
+}
+.input {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 300px;
+}
+.btnAddImg {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border:#525252;
+  text-align: center;
+  font-size: 30px;
+}
+.distancia {
+ padding-bottom: 180px;
+}
+.btnEditImg {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border:#525252;
+  text-align: center;
+  font-size: 30px;
+  background: url("../img/imagem_meta.png");
+}
