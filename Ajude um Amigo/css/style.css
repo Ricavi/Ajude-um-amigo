@@ -1,7 +1,6 @@
 .main img {
   max-width: 600px;
 }
-
 .main {
   background: linear-gradient(
     180deg,
@@ -10,26 +9,14 @@
   );
   mix-blend-mode: normal;
 }
-.mainSecond{
+.mainSecond {
   mix-blend-mode: normal;
-  width: 100vw;
-  height:100vh;
   background: #edd9ce;
 }
-
-.mainThird{  
-  
-  mix-blend-mode: normal;
-  width: 100vw;
-  height: 89vh;
-  background: #edd9ce;}
-  .mainFourth{
-    mix-blend-mode: normal;
-    width: 100vw;
-    height: 91vh;
-    background: #edd9ce;}
-  
-  *{margin: 0 0 0 0;}
+* {
+  margin: 0 0 0 0;
+  font-family: "Roboto", sans-serif;
+}
 /*
 
   Meta Do Dia
@@ -44,9 +31,8 @@
   mix-blend-mode: normal;
 }
 
-
 /*Botão*/
-.text button {
+.btn-style button{
   background-color: #7a3a28;
   color: white;
   margin-left: auto;
@@ -63,22 +49,12 @@
 }
 
 .tituloMeta h1 {
-  font-family: "Roboto", sans-serif;
   font-size: 42px;
   font-weight: 700;
   text-align: center;
   padding-top: 70px;
   padding-bottom: 40px;
 }
-
-
-
-
-
-
-
-
-
 
 /*
 
@@ -87,16 +63,12 @@
 
 */
 
-
-
-
 /*
 
   Quem Somos
   Inicio
 
 */
-
 
 .quemSomos {
   width: 100vw;
@@ -108,7 +80,6 @@
   text-align: center;
 }
 .tituloQuemSomos h1 {
-  font-family: "Roboto", sans-serif;
   font-size: 42px;
   font-weight: 700;
 }
@@ -119,7 +90,6 @@
   margin-bottom: 30px;
 }
 .sobreNos h1 {
-  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 700;
 }
@@ -130,7 +100,7 @@
 .conteinerHorizontal div {
   text-align: center;
 }
-.aa {
+.textTamanho {
   max-width: 370px;
 }
 /*
@@ -140,16 +110,13 @@
 
 */
 
-
-
 /*
 
   Footer
   Inicio
 
 */
-.footer{
-
+.footer {
   position: fixed;
   bottom: 0px;
   width: 100vw;
@@ -157,12 +124,10 @@
 footer {
   background: #525252;
   position: relative;
-  font-family: "Roboto", sans-serif;
   font-style: normal;
   display: flex;
   color: #ffffff;
   justify-content: space-around;
-  
 }
 footer div {
   padding-top: 9px;
@@ -180,8 +145,8 @@ footer li {
   list-style: none;
   cursor: pointer;
 }
-footer li a{
-  text-decoration:none;
+footer li a {
+  text-decoration: none;
   color: #ffffff;
 }
 footer li a:hover {
@@ -196,16 +161,6 @@ footer li a:hover {
 
 */
 
-
-
-
-
-
-
-
-.infoAnimal h1 {
-  font-family: "Roboto", sans-serif;
-}
 .infoAnimal p {
   margin-top: 20px;
 }
@@ -291,60 +246,28 @@ label {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border:#525252;
+  border: #525252;
   text-align: center;
   font-size: 30px;
 }
 .distancia {
- padding-bottom: 180px;
+  padding-bottom: 180px;
 }
 .btnEditImg {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border:#525252;
+  border: #525252;
   text-align: center;
   font-size: 30px;
   background: url("../img/imagem_meta.png");
 }
-.Centro{
-margin-top: 20vh;
+.Centro {
+  margin-top: 20vh;
 }
 .cachorroFone {
   position: relative;
   z-index: 0;
   width: 530px;
   height: 585px;
-}
-/*
-  Mapa
-*/
-
-.divmapa {
-  position: absolute;
-  z-index: 1;
-  left: 680px;
-  top: 189px;
-  width: 760px;
-  height: 549px;
-}
-
-.mapa {
-  position: relative;
-  width: 760px;
-  height: 549px;
-  border-radius: 20px;
-}
-
-.textoMapa {
-  position: absolute;
-  left: 700px;
-  top: 120px;
-
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 49px;
-  z-index: 2;
 }
