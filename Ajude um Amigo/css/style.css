@@ -1,7 +1,7 @@
-.main img {
+.gradient img {
   max-width: 600px;
 }
-.main {
+.gradient {
   background: linear-gradient(
     180deg,
     #ecd8cd 85.55%,
@@ -9,7 +9,7 @@
   );
   mix-blend-mode: normal;
 }
-.mainSecond {
+.fundo {
   mix-blend-mode: normal;
   background: #edd9ce;
 }
@@ -31,7 +31,6 @@
   mix-blend-mode: normal;
 }
 
-/*Botão*/
 .btn-style button{
   background-color: #7a3a28;
   color: white;
@@ -48,7 +47,7 @@
   padding-bottom: 20px;
 }
 
-.tituloMeta h1 {
+.titulos {
   font-size: 42px;
   font-weight: 700;
   text-align: center;
@@ -103,6 +102,9 @@
 .textTamanho {
   max-width: 370px;
 }
+.textJustificado{
+  text-align:justify;
+}
 /*
 
   Quem Somos
@@ -116,11 +118,7 @@
   Inicio
 
 */
-.footer {
-  position: fixed;
-  bottom: 0px;
-  width: 100vw;
-}
+
 footer {
   background: #525252;
   position: relative;
@@ -128,9 +126,10 @@ footer {
   display: flex;
   color: #ffffff;
   justify-content: space-around;
+  padding-bottom: 35px;
 }
 footer div {
-  padding-top: 9px;
+  padding-top: 12px;
 }
 footer h1 {
   padding-bottom: 5px;
@@ -164,28 +163,8 @@ footer li a:hover {
 .infoAnimal p {
   margin-top: 20px;
 }
-.gato {
-  position: absolute;
-  background-image: url("../img/imagem_meta.png");
-  width: 400px;
-  height: 400px;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  margin-top: 410px;
-  margin-left: 370px;
-}
-.backgroundMeta {
-  background: linear-gradient(
-    to top,
-    #ecd8cd 85.55%,
-    rgba(255, 255, 255, 0.3) 100%
-  );
-  mix-blend-mode: normal;
-}
-.btnMeta {
-  margin-left: 160px;
-  margin-top: 690px;
-}
+
+
 .meta img {
   border-radius: 50%;
   width: 400px;
@@ -200,13 +179,9 @@ footer li a:hover {
   height: 168px;
 }
 .centralizar {
-  display: flex !important;
+  display: flex !; 
   width: max-content;
   margin: auto;
-}
-.meio {
-  display: flex;
-  margin-left: auto;
 }
 .overflow {
   height: 100px;
@@ -223,10 +198,12 @@ footer li a:hover {
 }
 .adicionar {
   margin-top: 60%;
-  display: flex !important;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+}
+.tituloCard{
+  font-weight: 700;
 }
 label {
   width: 80px;
