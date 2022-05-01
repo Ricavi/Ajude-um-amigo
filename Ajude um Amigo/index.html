@@ -15,67 +15,70 @@
   </head>
 
   <body>
-    <section class="gradient">
-      <!-- itens quando o menu abre-->
-      <!--
+    <!-- itens quando o menu abre-->
+    <nav class="fundo">
     <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-dark p-4">
+      <div class="backgroundMenu p-4">
         <h5 class="text-white h4"></h5>
         <span class="text-muted"></span>
       </div>
     </div>
-    -->
-      <nav class="navbar navbar-light container">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarToggleExternalContent"
-            aria-controls="navbarToggleExternalContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav>
 
-      <div class="metaDia">
-        <div>
+    <div class="navbar navbar-light container">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarToggleExternalContent"
+          aria-controls="navbarToggleExternalContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+    <section class="gradient">
+      <article>
+        <div class="metaDia">
           <div>
-            <div class="tituloMeta">
-              <h1 class="titulos">Meta do dia</h1>
-            </div>
-            <div
-              class="d-flex meta justify-content-around align-items-center distancia"
-            >
-              <img src="./img/imagem_meta.png" alt="" />
-              <div class="infoAnimal textTamanho text-justify btn-style">
-                <h1 class="centralizar titulos">Charles</h1>
-                <p class="textJustificado">
-                  Olá pessoal, tudo bem? Meu nome é Charles, sou essa fofura de
-                  gato da foto, rs. Olha, eu preciso da sua ajuda para fazer uma
-                  cirurgia muito importante para mim! Infelizmente, eu quebrei a
-                  patinha enquanto atravessava a rua, e não tenho dinheiro
-                  suficiente para fazer a cirurgia e continuar brincando. Estou
-                  aqui pra pedir uma ajudinha de você, que tal me ajudar nessa?
-                </p>
+            <div>
+              <div class="tituloMeta">
+                <h1 class="titulos">Meta do dia</h1>
+              </div>
+              <div
+                class="d-flex meta justify-content-around align-items-center distancia"
+              >
+                <img src="./img/imagem_meta.png" alt="" />
+                <div class="infoAnimal textTamanho text-justify btn-style">
+                  <h1 class="centralizar titulos">Charles</h1>
+                  <p class="textJustificado">
+                    Olá pessoal, tudo bem? Meu nome é Charles, sou essa fofura
+                    de gato da foto, rs. Olha, eu preciso da sua ajuda para
+                    fazer uma cirurgia muito importante para mim! Infelizmente,
+                    eu quebrei a patinha enquanto atravessava a rua, e não tenho
+                    dinheiro suficiente para fazer a cirurgia e continuar
+                    brincando. Estou aqui pra pedir uma ajudinha de você, que
+                    tal me ajudar nessa?
+                  </p>
 
-                <button class="btn btn-am">Ajudar na meta</button>
+                  <button class="btn btn-am">Ajudar na meta</button>
+                </div>
               </div>
             </div>
           </div>
-          <div></div>
         </div>
-      </div>
+      </article>
     </section>
-    <section class="quemSomos container distancia">
-      <article>
-        <div class="tituloQuemSomos">
-          <h1>Quem somos</h1>
-        </div>
-        <div class="conteinerHorizontal">
+
+    <article class="quemSomos container distancia">
+      <div class="tituloQuemSomos">
+        <h1>Quem somos</h1>
+      </div>
+      <div class="conteinerHorizontal">
+        <section>
           <div class="textTamanho">
             <div class="sobreNos">
               <h1>Sobre nós</h1>
@@ -89,6 +92,9 @@
             </div>
             <img src="./img/icon_pessoas.png" alt="" />
           </div>
+        </section>
+
+        <section>
           <div class="textTamanho">
             <div class="sobreNos">
               <h1>Objetivo</h1>
@@ -105,11 +111,10 @@
             </div>
             <img src="./img/icon_alvo.png" alt="" />
           </div>
-        </div>
-      </article>
-    </section>
+        </section>
+      </div>
+    </article>
 
-    <!--Footer Inicio-->
     <footer>
       <div>
         <h1>Funcionalidades</h1>
@@ -126,7 +131,6 @@
         <li><a href="">Contato</a></li>
       </div>
     </footer>
-    <!--Footer Fim-->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
