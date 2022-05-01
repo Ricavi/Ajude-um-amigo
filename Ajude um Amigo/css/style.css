@@ -31,7 +31,7 @@
   mix-blend-mode: normal;
 }
 
-.btn-style button{
+.btn-style button {
   background-color: #7a3a28;
   color: white;
   margin-left: auto;
@@ -45,14 +45,18 @@
   margin-right: auto;
   width: max-content;
   padding-bottom: 20px;
+  padding-top: 30px;
 }
-
+.tituloMeta h1 {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 700;
+}
 .titulos {
-  font-size: 42px;
+  font-size: 25px;
   font-weight: 700;
   text-align: center;
   padding-top: 70px;
-  padding-bottom: 40px;
 }
 
 /*
@@ -79,7 +83,7 @@
   text-align: center;
 }
 .tituloQuemSomos h1 {
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 700;
 }
 .sobreNos {
@@ -102,8 +106,11 @@
 .textTamanho {
   max-width: 370px;
 }
-.textJustificado{
-  text-align:justify;
+.text {
+  margin-top: 20px;
+  text-align: justify;
+  color: #525252;
+  font-size: 13px;
 }
 /*
 
@@ -160,15 +167,12 @@ footer li a:hover {
 
 */
 
-.infoAnimal p {
-  margin-top: 20px;
-}
-
-
 .meta img {
   border-radius: 50%;
   width: 400px;
   height: 400px;
+  margin-top: 60px;
+  border: 2px solid #A1897C;
 }
 .btn-am {
   display: flex;
@@ -179,7 +183,7 @@ footer li a:hover {
   height: 168px;
 }
 .centralizar {
-  display: flex !; 
+  display: flex !;
   width: max-content;
   margin: auto;
 }
@@ -202,7 +206,7 @@ footer li a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-.tituloCard{
+.tituloCard {
   font-weight: 700;
 }
 label {
@@ -234,20 +238,28 @@ label {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: #525252;
   text-align: center;
   font-size: 30px;
   background: url("../img/imagem_meta.png");
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+  border: 2px solid #A1897C;
+
 }
-.Centro {
-  margin-top: 20vh;
-}
+
 .cachorroFone {
   position: relative;
   z-index: 0;
   width: 530px;
   height: 585px;
 }
-.backgroundMenu{
+.backgroundMenu {
   background: #525252;
+}
+
+.risco{
+  background: url("../img/fundo_titulo.png");
+  background-repeat: no-repeat;
+  background-size: 310px;
+  background-position: 50% 0%;
 }
