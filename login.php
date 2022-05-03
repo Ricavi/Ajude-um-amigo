@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
     <link rel="stylesheet" href="./css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -11,10 +12,17 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <title>Cadastro</title>
+    <title>Login</title>
   </head>
 
   <body>
+  
+  <?php
+  
+  ?>
+
+
+
     <!-- itens quando o menu abre-->
     <nav class="fundo">
       <div class="collapse" id="navbarToggleExternalContent">
@@ -40,29 +48,18 @@
         </div>
       </div>
     </nav>
-    <section class="fundo">
+    
+    <section class="fundo vw-auto">
       <div>
-        <h1 class="text-align-center tituloMeta titulos">Cadastro</h1>
+        <h1 class="text-align-center tituloMeta titulos">Login</h1>
         <div class="d-flex justify-content-around container distancia mt-4">
           <form action="">
-            <div class="d-flex gap-4">
-              <label for="">Nome</label>
-              <input type="text" class="input" />
-            </div>
             <div class="d-flex gap-4 mt-2">
               <label for="">Email</label>
               <input type="text" class="input" />
             </div>
-            <div class="d-flex gap-4 mt-2 text-nowrap">
-              <label for="">CPF ou CNPJ</label>
-              <input type="text" class="input" />
-            </div>
-            <div class="d-flex gap-4 mt-2">
-              <label for="">Senha</label>
-              <input type="text" class="input" />
-            </div>
             <div class="d-flex gap-4 mt-2 btn-style">
-              <label for="">Confirme a senha</label>
+              <label for="">Senha</label>
               <div>
                 <input type="text" class="input" />
                 <button class="btn btn-ctt centralizar mt-5">Enviar</button>
@@ -72,27 +69,5 @@
         </div>
       </div>
     </section>
-    <footer>
-      <div>
-        <h1>Funcionalidades</h1>
-        <li><a href="">Metas</a></li>
-      </div>
 
-      <div>
-        <h1>Quem somos</h1>
-        <li><a href="">Sobre nós</a></li>
-      </div>
-
-      <div>
-        <h1>Fale Conosco</h1>
-        <li><a href="">Contato</a></li>
-      </div>
-    </footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+    <?php require_once "footer.php";    ?>

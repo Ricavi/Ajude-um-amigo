@@ -12,9 +12,16 @@
       crossorigin="anonymous"
     />
 
-    <title>Criar meta</title>
+    <title>Editar meta</title>
   </head>
   <body>
+  
+  <?php
+  
+  ?>
+
+
+
     <!-- itens quando o menu abre-->
     <nav class="fundo">
       <div class="collapse" id="navbarToggleExternalContent">
@@ -42,28 +49,32 @@
     </nav>
 
     <section class="fundo">
-      <h1 class="text-align-center tituloMeta titulos">Criar meta</h1>
+      <h1 class="text-align-center tituloMeta titulos">Editar meta</h1>
       <div
         class="d-flex justify-content-around align-items-center container distancia"
       >
         <div>
-          <button class="btnAddImg mt-2">Adicionar imagem</button>
+          <button class="btnEditImg mt-2"></button>
         </div>
         <div>
           <form action="">
             <div class="d-flex gap-2">
               <label for="">Nome</label>
-              <input type="text" class="input" />
+              <input type="text" class="input" value="Charles" />
             </div>
             <div class="d-flex gap-2 mt-2">
               <label for="">Quantia</label>
-              <input type="text" class="input" />
+              <input type="text" class="input" value="10.000,00" />
             </div>
             <div class="d-flex mt-2 gap-2">
               <label for="">Descrição</label>
               <div class="btn-style">
-                <textarea name="" id="" rows="4" class="input"></textarea>
-                <button class="btn btn-ctt centralizar mt-2">Criar</button>
+                <textarea name="" id="" rows="4" class="input">
+Olá pessoal, tudo bem? Meu nome é Charles, sou essa fofura de gato da foto, rs. Olha, eu preciso da sua ajuda para fazer uma cirurgia muito importante para mim! Infelizmente, eu quebrei a patinha enquanto atravessava a rua, e não tenho dinheiro suficiente para fazer a cirurgia e continuar brincando. Estou aqui pra pedir uma ajudinha de você, que tal me ajudar nessa?</textarea
+                >
+                <button class="btn btn-ctt centralizar mt-2 button">
+                  Editar
+                </button>
               </div>
             </div>
           </form>
@@ -71,27 +82,5 @@
       </div>
     </section>
 
-    <footer>
-      <div>
-        <h1>Funcionalidades</h1>
-        <li><a href="">Metas</a></li>
-      </div>
+    <?php require_once "footer.php";    ?>
 
-      <div>
-        <h1>Quem somos</h1>
-        <li><a href="">Sobre nós</a></li>
-      </div>
-
-      <div>
-        <h1>Fale Conosco</h1>
-        <li><a href="">Contato</a></li>
-      </div>
-    </footer>
-    
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
