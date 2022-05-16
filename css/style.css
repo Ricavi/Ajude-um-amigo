@@ -1,5 +1,3 @@
-
-
 .gradient img {
   max-width: 600px;
 }
@@ -154,7 +152,7 @@ footer li {
   cursor: pointer;
 }
 footer li a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #ffffff;
 }
 footer li a:hover {
@@ -173,7 +171,7 @@ footer li a:hover {
   width: 400px;
   height: 400px;
   margin-top: 60px;
-  border: 2px solid #A1897C;
+  border: 2px solid #a1897c;
 }
 .btn-am {
   display: flex;
@@ -181,7 +179,7 @@ footer li a:hover {
   margin-right: auto;
 }
 .altura {
-  height: 168px;
+  height: 117px;
 }
 .centralizar {
   display: flex !;
@@ -244,8 +242,7 @@ label {
   background: url("../img/imagem_meta.png");
   background-size: 300px 300px;
   background-repeat: no-repeat;
-  border: 2px solid #A1897C;
-
+  border: 2px solid #a1897c;
 }
 
 .cachorroFone {
@@ -258,11 +255,18 @@ label {
   background: #525252;
 }
 
-.risco{
+.risco {
   background: url("../img/fundo_titulo.png");
   background-repeat: no-repeat;
   background-size: 310px;
   background-position: 50% 0%;
 }
 
+.link a{
+  text-decoration: underline;
+  color: #ffffff;
+}
 
+.link a:hover {
+  color: gainsboro;
+}

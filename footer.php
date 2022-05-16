@@ -1,11 +1,11 @@
 <footer>
 <div>
       <h1>Funcionalidades</h1>
-      <li><a href="">Metas</a></li>
+      <li><a href="./bichinhos">Bichinhos</a></li>
     </div>
  <div>
       <h1>Quem somos</h1>
-      <li><a href="">Sobre nós</a></li>
+      <li><a href="./index">Sobre nós</a></li>
     </div>
 
  <div>
