@@ -25,7 +25,7 @@
             <label for="">Senha</label>
             <div>
               <input type="text" class="input" />
-              <button class="btn btn-ctt centralizar mt-5">Logar</button>
+              <button type="" class="btn btn-ctt centralizar mt-5">Logar</button>
             </div>
           </div>
         </form>
