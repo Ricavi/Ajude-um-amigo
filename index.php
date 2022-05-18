@@ -33,7 +33,6 @@
                   fui abandonado e agora eu preciso encontrar novos donos. Que
                   tal me ajudar nessa?
                 </p>
-
                 <a href="" class="link"><button class="btn btn-am">Adotar</button></a>
               </div>
             </div>
