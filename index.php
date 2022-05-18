@@ -71,12 +71,10 @@
           </div>
           <div>
             <p class="text">
-              Muitas animais vivem na rua por causa de abandono ou
-              funcionamento, sobrevivendo apenas com doações e ajuda de
-              voluntarios, pensando nisso criamos este site. Nele contém um
-              mapa da sua região com as ONGs próximas de você, para que possa
-              visita-las e/ou fazer doações, além disso possuem as metas
-              criadas pelas próprias ONGs.
+              Muitas animais que são resgatados das ruas, ou até mesmo donos
+              que não tem mais condições de mantê-los, precisam de novos
+              lares para continuar suas vidas normalmente. Este site tem o
+              objetivo de mostrar esses bichinhos para os seus novos donos.
             </p>
           </div>
           <img src="./img/icon_alvo.png" alt="" />
