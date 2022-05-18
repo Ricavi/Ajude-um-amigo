@@ -15,7 +15,7 @@
   <section class="fundo">
     <div>
       <h1 class="centralizar titulos">Login</h1>
-      <div class="d-flex justify-content-center container distancia mt-4 ms-5">
+      <div class="d-flex justify-content-center container distancia mt-4">
         <form action="">
           <div class="d-flex gap-4 mt-2">
             <label for="">Email</label>

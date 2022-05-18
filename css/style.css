@@ -182,7 +182,7 @@ footer li a:hover {
   height: 117px;
 }
 .centralizar {
-  display: flex !;
+  display: flex;
   width: max-content;
   margin: auto;
 }
@@ -262,11 +262,7 @@ label {
   background-position: 50% 0%;
 }
 
-.link a{
-  text-decoration: underline;
-  color: #ffffff;
+.link a:hover{
+  text-decoration: none;
 }
 
-.link a:hover {
-  color: gainsboro;
-}

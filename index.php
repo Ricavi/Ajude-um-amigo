@@ -22,10 +22,10 @@
                 <h1>Meta do dia</h1>
               </div>
             </div>
-            <div class="d-flex meta justify-content-around align-items-center distancia link">
+            <div class="d-flex meta justify-content-around align-items-center distancia">
               <img src="./img/imagem_meta.png" alt="Gato" class="gato" />
               <div class="textTamanho btn-style link">
-                <h1 class="centralizar titulos">Charles</h1>
+                <h1 class="centralizar titulos link">Charles</h1>
                 <p class="text">
                   Olá pessoal, tudo bem? Meu nome é Charles, sou essa fofura
                   de gato da foto, rs. Olha, eu preciso da sua ajuda para
@@ -34,7 +34,7 @@
                   tal me ajudar nessa?
                 </p>
 
-                <a href=""><button class="btn btn-am">Vizualizar</button></a>
+                <a href="" class="link"><button class="btn btn-am">Adotar</button></a>
               </div>
             </div>
           </div>
@@ -71,12 +71,10 @@
           </div>
           <div>
             <p class="text">
-              Muitas animais vivem na rua por causa de abandono ou
-              funcionamento, sobrevivendo apenas com doações e ajuda de
-              voluntarios, pensando nisso criamos este site. Nele contém um
-              mapa da sua região com as ONGs próximas de você, para que possa
-              visita-las e/ou fazer doações, além disso possuem as metas
-              criadas pelas próprias ONGs.
+              Muitas animais que são resgatados das ruas, ou até mesmo donos
+              que não tem mais condições de mantê-los, precisam de novos
+              lares para continuar suas vidas normalmente. Este site tem o
+              objetivo de mostrar esses bichinhos para os seus novos donos.
             </p>
           </div>
           <img src="./img/icon_alvo.png" alt="" />
