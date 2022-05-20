@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+<?php require_once "head.php"; ?>
+<title>Home</title>
 </head>
 
 <body>
@@ -19,13 +11,13 @@
           <div>
             <div class="risco">
               <div class="tituloMeta">
-                <h1>Meta do dia</h1>
+                <h1>Amigo do dia</h1>
               </div>
             </div>
             <div class="d-flex meta justify-content-around align-items-center distancia">
               <img src="./img/imagem_meta.png" alt="Gato" class="gato" />
-              <div class="textTamanho btn-style link">
-                <h1 class="centralizar titulos link">Charles</h1>
+              <div class="textTamanho btn-style ">
+                <h1 class="centralizar subtitulo ">Charles</h1>
                 <p class="text">
                   Olá pessoal, tudo bem? Meu nome é Charles, sou essa fofura
                   de gato da foto, rs. Olha, eu preciso da sua ajuda para
@@ -33,7 +25,7 @@
                   fui abandonado e agora eu preciso encontrar novos donos. Que
                   tal me ajudar nessa?
                 </p>
-                <a href="" class="link"><button class="btn btn-am">Adotar</button></a>
+                <a href=""><button class="btn btn-am">Adotar</button></a>
               </div>
             </div>
           </div>
