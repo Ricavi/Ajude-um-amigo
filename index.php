@@ -14,7 +14,7 @@
                 <h1>Amigo do dia</h1>
               </div>
             </div>
-            <div class="d-flex meta justify-content-around align-items-center distancia">
+            <div class="d-flex meta justify-content-around align-items-center distancia charles">
               <img src="./img/imagem_meta.png" alt="Gato" class="gato" />
               <div class="textTamanho btn-style ">
                 <h1 class="centralizar subtitulo ">Charles</h1>
@@ -38,7 +38,7 @@
     <div class="tituloQuemSomos">
       <h1>Quem somos</h1>
     </div>
-    <div class="conteinerHorizontal">
+    <div class="conteinerHorizontal charles align-itens-center">
       <section>
         <div class="textTamanho">
           <div class="sobreNos">

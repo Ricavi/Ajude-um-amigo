@@ -4,7 +4,7 @@
 
 <body>
   <?php require_once "navBar.php"; ?>
-  <section class="fundo">
+  <section class="fundo login">
     <h1 class="titulo">Fale conosco</h1>
     <div class="Centro">
       <div class="d-flex justify-content-around align-items-center container">

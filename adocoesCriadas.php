@@ -17,8 +17,8 @@
       <div class="card" style="width: 18rem">
         <img src="./img/imagem_meta.png" class="card-img-top" alt="..." />
         <div class="card-body">
-          <h5 class="card-title centralizar">Charles</h5>
-          <p class="card-text overflow">
+          <h5 class="card-title centralizar tituloCard">Charles</h5>
+          <p class="card-text overflow text">
             Olá pessoal, tudo bem? Meu nome é Charles, sou essa fofura de gato
             da foto, rs. Olha, eu preciso da sua ajuda para fazer uma cirurgia
             muito importante para mim! Infelizmente, eu quebrei a patinha

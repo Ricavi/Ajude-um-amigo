@@ -50,7 +50,7 @@ require_once "head.php";
 
 <body>
   <?php require_once "navBar.php"; ?>
-  <section class="fundo">
+  <section class="fundo login">
     <div>
       <h1 class="titulo">Login</h1>
       <div class="d-flex justify-content-center container distancia mt-4">

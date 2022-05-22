@@ -14,6 +14,8 @@
 .fundo {
   mix-blend-mode: normal;
   background: #edd9ce;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -212,7 +214,7 @@ footer li {
   margin-right: auto;
 }
 .tituloCard {
-  font-weight: 700;
+  font-weight: bold;
 }
 label {
   width: 80px;
@@ -353,4 +355,46 @@ a:hover {
 #nav.active #hamburger::after {
   transform: rotate(-135deg);
   top: -7px;
+}
+.login {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginTitulo {
+  white-space: nowrap;
+  display: flex;
+  width: max-content;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  font-size: 38px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.novo {
+  max-width: 1200px;
+  width: 80vw;
+}
+
+.novo form {
+  width: 100%;
+}
+
+#sobre {
+}
+
+@media (max-width: 768px) {
+  footer h1 {
+    font-size: 13px;
+  }
+  footer li {
+    font-size: 8px;
+  }
+
+  .charles {
+    flex-direction: column;
+  }
 }
