@@ -25,7 +25,7 @@
           </div>
           <div class="d-flex mt-2">
             <label for="password">Senha</label>
-            <input type="password" class="input-group" name="senha" id="senha">
+            <input type="password" class="input-group" name="senha" id="senha" minlength="8" required>
           </div>
           <div class="btn-style">
             <button type="submit" name="btn-cadastrar" class="btn btn-ctt centralizar mt-5">Cadastrar</button>

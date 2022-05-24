@@ -15,9 +15,3 @@ function toggleMenu(event) {
 
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
-
-const sobre = document.getElementById('sobre');
-
-function (){
-  if()
-}
