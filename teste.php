@@ -17,17 +17,20 @@ if (isset($_POST['btn-entrar'])) :
 	else:
 		
 			
-			$sql = "SELECT senha from usuario where email='$email' and senha=$senha";
-
+			$sql = "SELECT senha from usuario where email='$email'";
 
 			$resultado = mysqli_query($connect,$sql);
+			$dados = mysqli_fetch_array($resultado);
 			//fechando a conexão depois de armazenar os dados
 			mysqli_close($connect);
 			
 			//numeros de linhas do resultado da query maior que 0 ou Se houver algum registro na tabela
 			if (mysqli_num_rows($resultado) > 0):
-				
-				echo 'Password OK!';
+				if (password_verify($senha, $dados[0])):
+					echo 'Password is valid!';
+				else :
+					echo 'Invalid password.';
+				endif;
 			else:
 				echo $sql;
 				
@@ -37,4 +40,3 @@ if (isset($_POST['btn-entrar'])) :
 
 
 endif;
-?>

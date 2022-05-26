@@ -14,14 +14,22 @@ if (isset($_POST['btn-cadastrar'])) :
 
 
 	$senha = mysqli_escape_string($connect, $_POST['senha']);
-	$senhaCripto=password_hash($senha,PASSWORD_BCRYPT);
+	$senhaCripto = password_hash($senha, PASSWORD_BCRYPT);
 	$sql = "INSERT INTO usuario(nome, email, cpf, senha) VALUES ('$nome','$email',$cpf,'$senhaCripto')";
-	//echo $sql;
-	if (mysqli_query($connect, $sql)) :
-		echo "Cadastro com sucesso!";
-	else :
-		echo "Erro no Cadastro";
-	endif;
+	$verificarEmail = "SELECT EXISTS(SELECT email 
+	from usuario 
+	where email = '$email')";
 
+	//echo $sql;
+	if ($verificarEmail == 0) :
+		if (mysqli_query($connect, $sql)) :
+			echo "Cadastro com sucesso!";
+		else :
+			echo "Erro no Cadastro";
+		endif;
+	else:
+		echo "Já existe um email";
+
+	endif;
 
 endif;
