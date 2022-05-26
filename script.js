@@ -43,7 +43,7 @@ var msgstatus = "";
 
 
 /*************************************************
-	Funï¿½ï¿½o que permitir digitar numeros 
+	Função que permitir digitar numeros 
 **************************************************/
 function EntradaNumerico(evt) {
 
@@ -56,7 +56,7 @@ function EntradaNumerico(evt) {
         if (key_code == 8  ||  key_code == 9  ||  key_code == 13  ||  key_code == 27  ||  key_code == 46) {
             return true;
         }
-        // Habilita teclas <HOME>, <END>, mais as quatros setas de navegaï¿½ï¿½o (cima, baixo, direta, esquerda)
+        // Habilita teclas <HOME>, <END>, mais as quatros setas de navegação (cima, baixo, direta, esquerda)
         else if ((key_code >= 35)  &&  (key_code <= 40)) {
             return true
         }
@@ -94,7 +94,7 @@ function isEmpty(s)
    return ((s == null) || (s.length == 0))
 }
 
-//Verifica se CPF ï¿½ vï¿½lido
+//Verifica se CPF é valido
 function TestaCPF(strCPF) {
     var Soma;
     var Resto;
@@ -120,8 +120,8 @@ function TestaCPF(strCPF) {
     return true;
 }
 
-// Recupera uma referï¿½ncia ao objeto com o id especificado
-// Funciona primariamente com o DOM, mas tambï¿½m aceita document.all
+// Recupera uma referencia ao objeto com o id especificado
+// Funciona primariamente com o DOM, mas também aceita document.all
 function pegaObj( id ) {
 	if ( typeof(document.getElementById) != 'undefined' )
 		return document.getElementById( id );
@@ -131,10 +131,10 @@ function pegaObj( id ) {
 }
 
 
-// Funï¿½ï¿½o chamada no evento onKeyDown para evitar que caracteres nï¿½o numï¿½ricos
+// Função chamada no evento onKeyDown para evitar que caracteres não numericos
 // sejam inseridos no campo indicado.
-// Parï¿½metros:
-// input: referï¿½ncia para o objeto <input> que recebeu o evento
+// Parametros:
+// input: referencia para o objeto <input> que recebeu o evento
 // e: o objeto event
 function ajustar_numero(input, e) {
 
@@ -146,8 +146,8 @@ function ajustar_numero(input, e) {
 	else
 		k = e.keyCode;
 				
-	// No IE nï¿½o essa funï¿½ï¿½o nï¿½o consegue cancelar tabs, BS, DEL, etc, mas no mozilla sim,
-	// por isso precisamos deixar passar as teclas de ediï¿½ï¿½o.
+	// No IE não essa Função não consegue cancelar tabs, BS, DEL, etc, mas no mozilla sim,
+	// por isso precisamos deixar passar as teclas de edificação.
 	// Somente aceita os caracteres 0-9, tab, enter, del e BS
 	if ( ((k<48)||(k>57)) && k != 8 && k != 9 && k != 127 && k != 13 && !((k>34)&&(k<41)) && k != 46) {
         if(e.ctrlKey && (k == 118 ||k == 99)) {
@@ -164,7 +164,7 @@ function ajustar_numero(input, e) {
 }
 
 
-// Funï¿½ï¿½o especï¿½fica do IE, que busca as informaï¿½ï¿½es do evento
+// Função especifica do IE, que busca as informações do evento
 // e repassa para as rotina em si "ajustar_numero" e "pular_campo"
 function ajustar_numeroie() {
 
@@ -184,13 +184,13 @@ function pular_campoie() {
 	
 }
 
-// Funï¿½ï¿½o que registra os inputs que precisam ser numï¿½ricos e que tï¿½m
-// um tamanho fixo que, quando alcanï¿½ado, muda para o prï¿½ximo campo.
-// Parï¿½metros:
+// Função que registra os inputs que precisam ser numericos e que tinham
+// um tamanho fixo que, quando alcançado, muda para o primeiro campo.
+// Parametros:
 // id: id do <input> que deve capturar os eventos de tecla
-// tamanhoMaximo: o nï¿½mero de dï¿½gitos mï¿½ximo para este campo
-// proximoId: id do prï¿½ximo campo no formulï¿½rio para o qual pularemos quando
-//            o nï¿½mero mï¿½ximo de dï¿½gitos for alcanï¿½ado.
+// tamanhoMaximo: o numero de digitos maximo para este campo
+// proximoId: id do primeiro campo no formulário para o qual pularemos quando
+//            o numero maximo de digitos for alcançado.
 var inputList = new Array();
 function registraInput( id, tamanhoMaximo, proximoId ) {
 
@@ -198,13 +198,13 @@ function registraInput( id, tamanhoMaximo, proximoId ) {
 	inputList[id]['tamanho'] = tamanhoMaximo;
 	inputList[id]['proximo'] = proximoId;
 
-	// No IE nï¿½o funciona setar o atributo via DOM, e o evento nï¿½o vem como parï¿½metro
-	// portanto precisamos setar uma funï¿½ï¿½o diferente para ele
+	// No IE não funciona setar o atributo via DOM, e o evento não vem como parï¿½metro
+	// portanto precisamos setar uma Função diferente para ele
 	pegaObj(id).onkeyup = pular_campoie;
 	pegaObj(id).onkeypress = ajustar_numeroie;
 	
-	// O mozilla tambï¿½m aceita a linha anterior, mas aqui nï¿½s passamos por cima e
-	// chamamos a funï¿½ï¿½o diretamente
+	// O mozilla também aceita a linha anterior, mas aqui nessa passamos por cima e
+	// chamamos a Função diretamente
 	pegaObj(id).setAttribute( 'onKeyUp', 'pular_campo(this, event)');
 	pegaObj(id).setAttribute( 'onKeyPress', 'return ajustar_numero(this,event)');
 
@@ -260,7 +260,7 @@ function FG_FormatarCPF(xElement) {
 
 function ValidarDados(xTipoSubmit) {
     var cpf = pegaObj("txtCPF").value;
-    cpf = cpf.replace(/[^0-9]/g, ''); //normalizar CPF antes de fazer validaï¿½ï¿½o, removendo campos nï¿½o numï¿½ricos
+    cpf = cpf.replace(/[^0-9]/g, ''); //normalizar CPF antes de fazer validação, removendo campos não numericos
 
 	if (cpf.length  != 11) {
 		alert("Por favor, preencha o CPF a ser consultado somente com os 11 nï¿½meros.");
