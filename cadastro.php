@@ -13,15 +13,32 @@
         <form action="crud_create.php" method="POST">
           <div class="d-flex">
             <label for="nome">Nome</label>
-            <input type="text" class="input-group" name="nome" id="nome">
+            <input type="text" class="input-group" name="nome" id="nome" required>
           </div>
           <div class="d-flex mt-2">
             <label for="email">Email</label>
-            <input type="email" class="input-group" name="email" id="email">
+            <input type="email" class="input-group" name="email" id="email" required>
           </div>
           <div class="d-flex mt-2 text-nowrap">
             <label for="cpf">CPF</label>
-            <input type="text" class="input-group" name="cpf" id="cpf">
+            
+            
+            
+            
+            <input type="text" class="input-group" maxlength="11" name="txtCPF" id="txtCPF"
+            autofocus="" title="Informe os onze dígitos do número do CPF." 
+             onkeypress="javascript: return EntradaNumerico(event);" 
+             onfocus="javascript: RemoveMask('txtCPF');"
+              onblur="javascript: FG_FormatarCPF('txtCPF');"
+            required>
+
+
+
+
+
+
+
+
           </div>
           <div class="d-flex mt-2">
             <label for="password">Senha</label>
