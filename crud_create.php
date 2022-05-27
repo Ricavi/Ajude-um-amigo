@@ -4,8 +4,8 @@
 if (isset($_POST['btn-cadastrar'])) :
 	$erros = array();
 
-	if(filter_input(INPUT_POST,'email', FILTER_VALIDATE_EMAIL)===false):
-		$erros[]="Email inválido";
+	if (filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL) === false) :
+		$erros[] = "Email inválido";
 	endif;
 
 
@@ -20,28 +20,32 @@ if (isset($_POST['btn-cadastrar'])) :
 	//echo "conectado ao banco";
 	$nome = mysqli_escape_string($connect, $_POST['nome']);
 	//$email = mysqli_escape_string($connect, $_POST['email']);
+	$nome = trim($nome);
+	if ($nome != "") :
+		$cpf = str_replace(array(".", "-"), "", $_POST['txtCPF']);
+		$cpf = (mysqli_escape_string($connect, $cpf));
 
-	$cpf = str_replace(array(".", "-"), "", $_POST['txtCPF']);
-	$cpf = (mysqli_escape_string($connect, $cpf));
+		$senha = mysqli_escape_string($connect, $_POST['senha']);
+		$senhaCripto = password_hash($senha, PASSWORD_BCRYPT);
 
-	$senha = mysqli_escape_string($connect, $_POST['senha']);
-	$senhaCripto = password_hash($senha, PASSWORD_BCRYPT);
+		$email = mysqli_escape_string($connect, $_POST['email']);
+		$verificarEmail = mysqli_fetch_array(mysqli_query($connect, "SELECT EXISTS(SELECT email from usuario where email = '$email')"));
 
-	$email = mysqli_escape_string($connect, $_POST['email']);
-	$verificarEmail = mysqli_fetch_array(mysqli_query($connect, "SELECT EXISTS(SELECT email from usuario where email = '$email')"));
+		$sql = "INSERT INTO usuario(nome, email, cpf, senha) VALUES ('$nome','$email',$cpf,'$senhaCripto')";
+		//echo $sql;
 
-	$sql = "INSERT INTO usuario(nome, email, cpf, senha) VALUES ('$nome','$email',$cpf,'$senhaCripto')";
-	//echo $sql;
-
-	if ($verificarEmail[0] == 0) :
-		if (mysqli_query($connect, $sql)) :
-			echo "Cadastro com sucesso!";
+		if ($verificarEmail[0] == 0) :
+			if (mysqli_query($connect, $sql)) :
+				echo "Cadastro com sucesso!";
+			else :
+				echo "Erro no Cadastro";
+			endif;
 		else :
-			echo "Erro no Cadastro";
+			echo "Já existe um email";
+
 		endif;
 	else :
-		echo "Já existe um email";
-
+		echo "Nome não pode ser vazio";
 	endif;
 
 endif;
