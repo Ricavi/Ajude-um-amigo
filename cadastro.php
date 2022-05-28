@@ -25,12 +25,8 @@
             
             
             
-            <input type="text" class="input-group" maxlength="11" name="txtCPF" id="txtCPF"
-            autofocus="" title="Informe os onze dígitos do número do CPF." 
-             onkeypress="javascript: return EntradaNumerico(event);" 
-             onfocus="javascript: RemoveMask('txtCPF');"
-              onblur="javascript: FG_FormatarCPF('txtCPF');"
-            required>
+            <input type="text" class="input-group" minlength="14" maxlength="14" name="txtCPF" id="txtCPF"
+            autofocus="" title="Informe os onze dígitos do número do CPF." required>
 
 
 
