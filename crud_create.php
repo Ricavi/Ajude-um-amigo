@@ -19,14 +19,16 @@ if (isset($_POST['btn-cadastrar'])) :
 	require_once 'dbconnect.php';
 	//echo "conectado ao banco";
 	$nome = mysqli_escape_string($connect, $_POST['nome']);
-	//$email = mysqli_escape_string($connect, $_POST['email']);
 	$nome = trim($nome);
-	if ($nome != "") :
+
+	$senha = mysqli_escape_string($connect, $_POST['senha']);
+	$nome = trim($senha);
+
+	if ($nome != "" && $senha) :
+		$senhaCripto = password_hash($senha, PASSWORD_BCRYPT);
+
 		$cpf = str_replace(array(".", "-"), "", $_POST['txtCPF']);
 		$cpf = (mysqli_escape_string($connect, $cpf));
-
-		$senha = mysqli_escape_string($connect, $_POST['senha']);
-		$senhaCripto = password_hash($senha, PASSWORD_BCRYPT);
 
 		$email = mysqli_escape_string($connect, $_POST['email']);
 		$verificarEmail = mysqli_fetch_array(mysqli_query($connect, "SELECT EXISTS(SELECT email from usuario where email = '$email')"));
@@ -45,7 +47,7 @@ if (isset($_POST['btn-cadastrar'])) :
 
 		endif;
 	else :
-		echo "Nome não pode ser vazio";
+		echo "Os campos não podem ser enviados vazios";
 	endif;
 
 endif;

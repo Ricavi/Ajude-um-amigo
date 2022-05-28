@@ -294,6 +294,16 @@ a:hover {
   background: #edd9ce;
 }
 
+#headerChat {
+  box-sizing: border-box;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #8a4431f1;
+}
+
 #menu {
   display: block;
   position: absolute;
@@ -374,7 +384,7 @@ a:hover {
   margin-right: auto;
 }
 
-.novo {
+.formresponsivo {
   max-width: 1200px;
   width: 80vw;
 }
@@ -383,7 +393,8 @@ a:hover {
   width: 100%;
 }
 
-#sobre {
+.corpoChat {
+  height: 80vw;
 }
 
 @media (max-width: 768px) {

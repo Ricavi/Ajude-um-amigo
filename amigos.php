@@ -19,7 +19,7 @@
               fui abandonado e agora eu preciso encontrar novos donos. Que
               tal me ajudar nessa?
             </p>
-            <button class="btn btn-ctt centralizar mt-2">Adotar</button>
+            <a href="../Ajudeumamigo/chat"><button class="btn btn-am">Adotar</button></a>
           </div>
         </div>
         <div class="card" style="width: 18rem">
@@ -33,7 +33,7 @@
               fui abandonado e agora eu preciso encontrar novos donos. Que
               tal me ajudar nessa?
             </p>
-            <button class="btn btn-ctt centralizar mt-2">Adotar</button>
+            <a href="../Ajudeumamigo/chat"><button class="btn btn-am">Adotar</button></a>
           </div>
         </div>
         <div class="card" style="width: 18rem">
@@ -47,7 +47,7 @@
               fui abandonado e agora eu preciso encontrar novos donos. Que
               tal me ajudar nessa?
             </p>
-            <button class="btn btn-ctt centralizar mt-2">Adotar</button>
+            <a href="../Ajudeumamigo/chat"><button class="btn btn-am">Adotar</button></a>
           </div>
         </div>
         <div class="card" style="width: 18rem">
@@ -61,7 +61,7 @@
               fui abandonado e agora eu preciso encontrar novos donos. Que
               tal me ajudar nessa?
             </p>
-            <button class="btn btn-ctt centralizar mt-2">Adotar</button>
+            <a href="../Ajudeumamigo/chat"><button class="btn btn-am">Adotar</button></a>
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@
                   fui abandonado e agora eu preciso encontrar novos donos. Que
                   tal me ajudar nessa?
                 </p>
-                <a href=""><button class="btn btn-am">Adotar</button></a>
+                <a href="../Ajudeumamigo/chat"><button class="btn btn-am">Adotar</button></a>
               </div>
             </div>
           </div>

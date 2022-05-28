@@ -7,10 +7,10 @@
             <li><a href="./index">Inicio</a></li>
             <li><a href="./login">Login</a></li>
             <li><a href="./cadastro">Cadastrar</a></li>
-            <li><a href="./amigos">Bichinhos</a></li>
-            <li><a href="" id="sobre">Sobre</a></li>
+            <li><a href="./amigos">Amigos</a></li>
+            <li><a href="">Sobre</a></li>
             <li><a href="./contatos">Contato</a></li>
-            <li><a href="./logout">lOGOUT</a></li>
+            <li><a href="./logout">logout</a></li>
         </ul>
     </nav>
 </header>

@@ -1,7 +1,7 @@
 <footer>
   <div>
     <h1>Funcionalidades</h1>
-    <li><a href="./amigos">Bichinhos</a></li>
+    <li><a href="./amigos">Amigos</a></li>
   </div>
   <div>
     <h1>Quem somos</h1>
