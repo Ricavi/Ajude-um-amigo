@@ -237,6 +237,7 @@ label {
   background-image: #525252;
   text-align: center;
   font-size: 30px;
+  object-fit:cover;
 }
 .distancia {
   padding-bottom: 180px;
