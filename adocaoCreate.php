@@ -12,23 +12,24 @@ if (isset($_POST['btn-criar-adocao'])) :
     $nome = mysqli_escape_string($connect, $_POST['nomeBicho']);
     $descricao = mysqli_escape_string($connect, $_POST['descricao']);
     if (isset($_SESSION['logado']) == true) :
-        echo "Usuario Logado";
 
 
 
 
         // IMAGEM    
         //FOMARTOS PPERMITIDOS
-
         $formatosPermitidos = array("jpg", "jpeg", "jpg", "avif");
 
+        $idUser = $_SESSION['id_user'];
+        mkdir("imgBichos/$idUser");
         $extensao = pathinfo($_FILES['imagemBicho']['name'], PATHINFO_EXTENSION);
         if (in_array($extensao, $formatosPermitidos)) :
             $pasta = "imgBichos/";
+            $pastaUsuario = "$idUser/";
             $temporario = $_FILES['imagemBicho']['tmp_name'];
             $novoNome = $nome . uniqid() . ".$extensao";
 
-            if (move_uploaded_file($temporario, $pasta . $novoNome)) :
+            if (move_uploaded_file($temporario, $pasta . $pastaUsuario . $novoNome)) :
                 $mensagem = "Upload feito com sucesso";
             else :
                 $mensagem = "Não consegui realizar o upload!";
