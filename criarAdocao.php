@@ -1,4 +1,11 @@
-<?php require_once "head.php"; ?>
+<?php require_once "head.php"; 
+session_start();
+if (isset($_SESSION['logado']) == true) :
+
+else:
+  header('Location:login');
+endif;
+?>
 <title>Criar adoção</title>
 </head>
 
