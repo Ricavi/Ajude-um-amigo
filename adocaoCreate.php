@@ -29,7 +29,16 @@ if (isset($_POST['btn-criar-adocao'])) :
             $pasta = "imgBichos/";
             $pastaUsuario = "$idUser/";
             $temporario = $_FILES['imagemBicho']['tmp_name'];
-            $novoNome = $nome . uniqid() . ".$extensao";
+
+            $sqlBicho = "INSERT INTO bichinho(nome, diretorio ,descricao, fk_id) VALUES ('$nome','X','$descricao','$idUser')";
+            if (mysqli_query($connect, $sqlBicho)) :
+            endif;
+
+            $sqlBichoId="SELECT id FROM bichinho WHERE nome='$nome' and fk_id='$idUser'";
+            $sqlBichoId=mysqli_fetch_array(mysqli_query($connect, $sqlBichoId));
+            
+            
+            $novoNome = $sqlBichoId[0] . $nome . ".$extensao";
 
             if (move_uploaded_file($temporario, $pasta . $pastaUsuario . $novoNome)) :
                 $mensagem = "Upload feito com sucesso";
@@ -44,8 +53,9 @@ if (isset($_POST['btn-criar-adocao'])) :
 
         $diretorio = "imgBichos/$idUser/$novoNome";
 
-        //Armazena TUdo no banco de dados
-        $sql = "INSERT INTO bichinho(nome, diretorio, descricao, fk_id) VALUES ('$nome','$diretorio','$descricao','$idUser')";
+        //altera diretorio no banco de dados
+        
+        $sql = "UPDATE `bichinho` SET `diretorio` = '$diretorio' WHERE `bichinho`.`diretorio` = 'X'";
         if (mysqli_query($connect, $sql)) :
         endif;
         echo $mensagem;

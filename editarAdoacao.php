@@ -11,6 +11,23 @@
         <button class="btnEditImg mt-2"></button>
       </div>
       <div>
+        <?php
+//Abrir a sessão
+session_start();
+
+//Verificar se o fk_id de bichinhos é igual o da SESSION
+$idUser=$_SESSION['id_user'];
+//conexão com o banco de dados
+//id do bichinho
+//Armazenar o id do bicho na sessão
+$sqlIdBicho="SELECT id FROM bichinho WHERE fk_id=$idUser"
+
+
+
+//variaveis do banco de dados
+
+
+?>
         <form action="">
           <div class="d-flex gap-2">
             <label for="">Nome</label>

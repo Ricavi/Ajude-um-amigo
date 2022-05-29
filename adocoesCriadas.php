@@ -14,6 +14,28 @@
           </button>
         </div>
       </div>
+<?php
+//Abrir a sessão
+session_start();
+$idUser=$_SESSION['id_user'];
+$sqlBicho = "SELECT id FROM bichinho WHERE fk_id='$idUser'";
+$dadosBicho =mysqli_fetch_array( mysqli_query($connect, $sqlUser));
+
+
+
+$sqlNome="SELECT nome FROM bichinho WHERE fk_id='$idUser'";
+$dadosNome=mysqli_fetch_array( mysqli_query($connect, $sqlNome));
+
+
+
+$sqlDiretorio="SELECT diretorio FROM bichinho WHERE fk_id='$idUser'";
+$dadosDiretorio=mysqli_fetch_array( mysqli_query($connect, $sqlDiretorio));
+
+
+
+?>
+
+
       <div class="card" style="width: 18rem">
         <img src="./img/imagem_meta.png" class="card-img-top" alt="..." />
         <div class="card-body">
@@ -36,6 +58,10 @@
           </div>
         </div>
       </div>
+
+
+
+
     </div>
   </section>
 

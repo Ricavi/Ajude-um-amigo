@@ -25,3 +25,4 @@ window.onload = function () {
   });
   toastList.forEach((toast) => toast.show());
 };
+
