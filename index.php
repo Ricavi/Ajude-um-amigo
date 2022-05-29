@@ -34,7 +34,7 @@
     </article>
   </section>
 
-  <article class="quemSomos container distancia">
+  <article class="quemSomos container distancia" id="ancora">
     <div class="tituloQuemSomos">
       <h1>Quem somos</h1>
     </div>

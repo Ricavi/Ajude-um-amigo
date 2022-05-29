@@ -4,8 +4,6 @@
 //The require_once expression is identical to require except PHP will check if the file has already been included, and if so, not include (require) it again.
 require_once 'dbconnect.php';
 
-//iniciar a sessão
-session_start();
 require_once "head.php";
 ?>
   <title>Login</title>
@@ -14,13 +12,14 @@ require_once "head.php";
 <body>
   <?php require_once "navBar.php"; ?>
   <section class="fundo login">
+  <?php require_once "feedback.php"; ?>
     <div>
       <h1 class="titulo">Login</h1>
       <div class="d-flex justify-content-center container distancia mt-4">
 
 
 
-        <form action="teste.php" method="POST">
+        <form action="entrar.php" method="POST">
           <div class="d-flex gap-4 mt-2">
             <label for="">Email</label>
             <input type="emaillogin" class="input" name="emaillogin" id="email">

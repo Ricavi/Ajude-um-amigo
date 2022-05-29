@@ -1,5 +1,9 @@
 <?php
+//Iniciar  Sessão
+session_start();
 
+require_once 'dbconnect.php';
+//echo "conectado ao banco";
 
 if (isset($_POST['btn-cadastrar'])) :
 	$erros = array();
@@ -16,8 +20,7 @@ if (isset($_POST['btn-cadastrar'])) :
 
 
 
-	require_once 'dbconnect.php';
-	//echo "conectado ao banco";
+
 	$nome = mysqli_escape_string($connect, $_POST['nome']);
 	$nome = trim($nome);
 
@@ -35,19 +38,21 @@ if (isset($_POST['btn-cadastrar'])) :
 
 		$sql = "INSERT INTO usuario(nome, email, cpf, senha) VALUES ('$nome','$email',$cpf,'$senhaCripto')";
 		//echo $sql;
-
 		if ($verificarEmail[0] == 0) :
 			if (mysqli_query($connect, $sql)) :
-				echo "Cadastro com sucesso!";
+				$_SESSION['mensagem'] = "Cadastrado com sucesso!";
+				header('Location:login');
 			else :
-				echo "Erro no Cadastro";
+				$_SESSION['mensagem'] = "Erro no Cadastro";
+				header('Location:cadastro');
 			endif;
 		else :
-			echo "Já existe um email";
-
+			$_SESSION['mensagem'] = "Já existe uma conta utilizando este email";
+			header('Location:cadastro');
 		endif;
 	else :
-		echo "Os campos não podem ser enviados vazios";
+		$_SESSION['mensagem'] = "Os campos não podem ser enviados vazios";
+		header('Location:cadastro');
 	endif;
 
 endif;
