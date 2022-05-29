@@ -25,7 +25,7 @@ if (isset($_POST['btn-cadastrar'])) :
 	$nome = trim($nome);
 
 	$senha = mysqli_escape_string($connect, $_POST['senha']);
-	$nome = trim($senha);
+	$senha = trim($senha);
 
 	if ($nome != "" && $senha) :
 		$senhaCripto = password_hash($senha, PASSWORD_BCRYPT);

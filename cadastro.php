@@ -8,7 +8,8 @@
   <?php require_once "feedback.php"; ?>
     <h1 class="loginTitulo">Cadastro</h1>
     <div class="d-flex justify-content-center container distancia mt-4 formresponsivo">
-      <form action="crud_create.php" method="POST">
+      
+    <form action="crud_create.php" method="POST">
         <div class="d-flex">
           <label for="nome">Nome</label>
           <input type="text" class="input-group" name="nome" id="nome" required>
