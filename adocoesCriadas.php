@@ -21,7 +21,7 @@
       $idUser = $_SESSION['id_user'];
       $sqlBicho = "SELECT id FROM bichinho WHERE fk_id='$idUser'";
       $dadosBicho = mysqli_fetch_array(mysqli_query($connect, $sqlBicho));
-      $_SESSION['id_bicho']=$sqlBicho;
+      $_SESSION['id_bicho']=$dadosBicho;
 
 
       $sqlNome = "SELECT nome FROM bichinho WHERE fk_id='$idUser'";

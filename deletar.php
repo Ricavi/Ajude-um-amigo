@@ -4,9 +4,9 @@ require_once 'dbconnect.php';
 if (isset($_POST['btn-delete'])) :
     $idUser = $_SESSION['id_user'];
     $idBicho = $_SESSION['id_bicho'];
-    $sqlDeletar = "DELETE FROM `bichinho` WHERE fk_id='$idUser'";
-
-    $sqlDiretorio = "SELECT diretorio FROM bichinho WHERE fk_id='$idUser'";
+    $sqlDeletar = "DELETE FROM bichinho WHERE id='$idBicho[0]'";
+print_r($idBicho[0]);
+    $sqlDiretorio = "SELECT diretorio FROM bichinho WHERE id='$idBicho[0]'";
     $dadosDiretorio = mysqli_fetch_array(mysqli_query($connect, $sqlDiretorio));
     //Deletar diretorio
 
