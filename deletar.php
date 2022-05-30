@@ -9,15 +9,15 @@ if (isset($_POST['btn-delete'])) :
     $sqlDiretorio = "SELECT diretorio FROM bichinho WHERE fk_id='$idUser'";
     $dadosDiretorio = mysqli_fetch_array(mysqli_query($connect, $sqlDiretorio));
     //Deletar diretorio
-    
+
     if (unlink("$dadosDiretorio[0]")) :
         echo "Deletado o diretorio";
     else :
         echo "erro ao deletar o diretorio";
     endif;
-    
 
-    if (mysqli_query($connect,$sqlDeletar)) :
+
+    if (mysqli_query($connect, $sqlDeletar)) :
         echo "Deletado do banco de dados";
     else :
         echo "Erro ao deletar o banco";

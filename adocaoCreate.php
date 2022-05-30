@@ -3,7 +3,6 @@
 session_start();
 
 require_once 'dbconnect.php';
-//echo "conectado ao banco";
 
 if (isset($_POST['btn-criar-adocao'])) :
     $erros = array();
