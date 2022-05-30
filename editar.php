@@ -37,8 +37,8 @@ if (isset($_POST['btn-editar-adocao'])) :
 
 
 
-    if (isset($_FILES)) :
-        //verifica se a descrição foi alterada
+    if ($_FILES['alterarImagemBicho']['size']!=0) :
+        //verifica se o diretorio foi alterada
         if (unlink($diretorioDeletar[0])) :
             echo "DELETADO";
         else :
