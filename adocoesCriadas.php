@@ -36,7 +36,8 @@
       $dadosDescricao = mysqli_fetch_array(mysqli_query($connect, $sqlDescricao));
 
 
-
+  //CRIAR UM IF PARA VERIFICAR SE EXISTE ESSAS COISAS AI DE CIMA
+  //PARA NÃO APARECER O ERRO
 
       ?>
 
@@ -57,14 +58,17 @@
             ?>
           </p>
           <div class="d-flex justify-content-around">
-            <button class="btn">
+
+
+            <form action="editar.php" method="POST"></form>
+            <button type="submit" name="btn-editar" class="btn btn-editar ">
               <i class="bi bi-pencil-fill tamanhoIcons"></i>
             </button>
 
 
 
-            <form action="deletar.php" method="POST">
-              <button type="submit" action="deletar.php" name="btn-delete" class="btn btn-delete">
+            <form action="deletar.php" method="POST" >
+              <button type="submit"  name="btn-delete" class="btn btn-delete">
                 <i class="bi bi-trash3-fill tamanhoIcons"></i>
               </button>
             </form>
