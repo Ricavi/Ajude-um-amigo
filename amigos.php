@@ -1,6 +1,9 @@
-<?php require_once "head.php"; ?>
-<title>Amigos</title>
-</head>
+<?php 
+session_start();
+require_once "head.php";
+$nomePagina="Amigos";
+require_once "titulo.php"; ?>
+
 
 <body>
   <?php require_once "navBar.php"; ?>

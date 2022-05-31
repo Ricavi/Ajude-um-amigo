@@ -1,18 +1,16 @@
 <?php
-
-//Conexão
-//The require_once expression is identical to require except PHP will check if the file has already been included, and if so, not include (require) it again.
+session_start();
 require_once 'dbconnect.php';
-
 require_once "head.php";
-?>
-  <title>Login</title>
-</head>
+require_once "head.php";
+$nomePagina="Login";
+require_once "titulo.php"; ?>
 
 <body>
-  <?php require_once "navBar.php"; ?>
+  <?php require_once "navBar.php";
+  require_once "feedback.php";
+  ?>
   <section class="fundo login">
-  <?php require_once "feedback.php"; ?>
     <div>
       <h1 class="titulo">Login</h1>
       <div class="d-flex justify-content-center container distancia mt-4">

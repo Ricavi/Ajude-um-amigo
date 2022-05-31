@@ -1,6 +1,10 @@
-<?php require_once "head.php"; ?>
-<title>Editar adoção</title>
-</head>
+<?php
+session_start();
+if (isset($_SESSION['logado']) == true) :
+require_once "head.php";
+require_once "head.php";
+$nomePagina = "Editar adoção";
+require_once "titulo.php"; ?>
 
 <body>
   <?php require_once "navBar.php"; ?>
@@ -13,7 +17,7 @@
   <?php
   //Abrir a sessão
   require_once 'dbconnect.php';
-  session_start();
+
 
   //Verificar se o fk_id de bichinhos é igual o da SESSION
   //conexão com o banco de dados
@@ -30,12 +34,12 @@
 
   $sqlNome = "SELECT nome FROM bichinho WHERE fk_id='$idUser'";
   $dadosNome = mysqli_fetch_array(mysqli_query($connect, $sqlNome));
-$_SESSION['nome_bicho']=$dadosNome;
+  $_SESSION['nome_bicho'] = $dadosNome;
 
 
   $sqlDiretorio = "SELECT diretorio FROM bichinho WHERE fk_id='$idUser'";
   $dadosDiretorio = mysqli_fetch_array(mysqli_query($connect, $sqlDiretorio));
-$_SESSION['diretorio']=$dadosDiretorio;
+  $_SESSION['diretorio'] = $dadosDiretorio;
   $sqlDescricao = "SELECT descricao FROM bichinho WHERE fk_id='$idUser'";
   $dadosDescricao = mysqli_fetch_array(mysqli_query($connect, $sqlDescricao));
 
@@ -86,4 +90,9 @@ $_SESSION['diretorio']=$dadosDiretorio;
     </div>
   </section>
 
-  <?php require_once "footer.php";    ?>
+  <?php require_once "footer.php";    
+  else :
+    $_SESSION['mensagem'] = "Você precisa estar Logado!";
+    header('Location:login');
+  endif;
+  ?>

@@ -1,9 +1,13 @@
-<?php require_once "head.php"; ?>
-<title>Home</title>
-</head>
-
+<?php 
+session_start();
+require_once "head.php";
+$nomePagina="Home";
+require_once "titulo.php";
+?>
 <body>
-  <?php require_once "navBar.php"; ?>
+<?php require_once "navBar.php";
+  require_once "feedback.php";
+  ?>
   <section class="gradient">
     <article>
       <div class="metaDia">
@@ -25,7 +29,7 @@
                   fui abandonado e agora eu preciso encontrar novos donos. Que
                   tal me ajudar nessa?
                 </p>
-                <a href="../Ajudeumamigo/chat"><button class="btn btn-am">Adotar</button></a>
+                <a href="chat"><button class="btn btn-am">Adotar</button></a>
               </div>
             </div>
           </div>

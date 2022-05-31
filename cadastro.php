@@ -1,6 +1,8 @@
-<?php require_once "head.php"; ?>
-<title>Cadastro</title>
-</head>
+<?php
+session_start();
+require_once "head.php";
+$nomePagina="Cadastro";
+require_once "titulo.php"; ?>
 
 <body>
   <?php require_once "navBar.php"; ?>

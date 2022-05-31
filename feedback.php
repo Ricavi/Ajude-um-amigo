@@ -1,7 +1,4 @@
 <?php
-//Iniciar  Sessão
-session_start();
-
 //se existe a sessão mensagem criada
 if (isset($_SESSION['mensagem'])) :
 ?>
@@ -17,5 +14,5 @@ if (isset($_SESSION['mensagem'])) :
 	</div>
 <?php
 endif;
-session_unset(); //limpar a sessão
+unset($_SESSION['mensagem']);
 ?>

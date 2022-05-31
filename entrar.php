@@ -36,6 +36,7 @@ if (isset($_POST['btn-entrar'])) :
 				if (mysqli_num_rows($resultadoUser) > 0) :
 					$_SESSION['logado'] = true;
 					$_SESSION['id_user'] = $dadosUser['id'];
+					$_SESSION['mensagem'] = "Login realizado!";
 					header('Location:index.php');
 					mysqli_close($connect);
 				endif;
