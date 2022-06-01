@@ -26,16 +26,15 @@ if (isset($_SESSION['logado']) == true) :
           </a>
         </div>
         <?php
-        //Abrir a sessão
         $idUser = $_SESSION['id_user'];
-        $sqlBicho = "SELECT id FROM bichinho WHERE fk_id='$idUser'";
+        $sqlBicho = "SELECT * FROM bichinho WHERE fk_id='$idUser'";
         $dadosBicho = mysqli_fetch_array(mysqli_query($connect, $sqlBicho));
         $_SESSION['id_bicho'] = $dadosBicho;
 
 
         $sqlNome = "SELECT nome FROM bichinho WHERE fk_id='$idUser'";
         $dadosNome = mysqli_query($connect, $sqlNome);
-        $ArrayNome = mysqli_fetch_row($dadosNome);
+        $arrayNome = mysqli_fetch_row($dadosNome);
         //Fazer o indice
         //Fazer um botão para aumentar o indice até o count de cima
 
@@ -46,56 +45,58 @@ if (isset($_SESSION['logado']) == true) :
         $sqlDescricao = "SELECT descricao FROM bichinho WHERE fk_id='$idUser'";
         $dadosDescricao = mysqli_fetch_array(mysqli_query($connect, $sqlDescricao));
 
+        $bichos = mysqli_query($connect, $sqlBicho);
 
         //PARA NÃO APARECER O ERRO
         if (empty($dadosDescricao)) :
           $dadosDescricao[0] = ("Nenhuma descrição encontrada");
         endif;
-        if (empty($ArrayNome)) :
-          $ArrayNome[0] = ("Nenhuma nome encontrado");
+        if (empty($arrayNome)) :
+          $arrayNome[0] = ("Nenhuma nome encontrado");
         endif;
         if (empty($dadosDiretorio)) :
           $dadosDiretorio[0] = ("./img/no_image.jpg");
         endif;
 
         ?>
+      
+        <?php while ($dados=mysqli_fetch_array($bichos)) { ?>
+          <div class="card" style="width: 18rem">
+            <img src="<?php echo $dados['diretorio'];?>" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title centralizarCard tituloCard">
+                <?php
+                echo $dados['nome'];
+                ?>
+              </h5>
+              <p class="card-text overflow text">
+                <?php
+                echo $dados['descricao'];
+                ?>
+              </p>
+              <div class="d-flex justify-content-around">
+
+                <a href="editarAdoacao.php">
+                  <button name="btn-editar" class="btn btn-editar ">
+                    <i class="bi bi-pencil-fill tamanhoIcons"></i>
+                  </button>
+                </a>
 
 
-        <div class="card" style="width: 18rem">
-          <img src="<?php
-                    echo "$dadosDiretorio[0]";
-                    ?>" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title centralizarCard tituloCard">
-              <?php
-              echo "$ArrayNome[0]";
-              ?>
-            </h5>
-            <p class="card-text overflow text">
-              <?php
-              echo "$dadosDescricao[0]";
-              ?>
-            </p>
-            <div class="d-flex justify-content-around">
-
-              <a href="editarAdoacao.php">
-                <button name="btn-editar" class="btn btn-editar ">
-                  <i class="bi bi-pencil-fill tamanhoIcons"></i>
-                </button>
-              </a>
+                <form action="deletar.php" method="POST">
+                  <button name="btn-delete" class="btn btn-delete">
+                    <i class="bi bi-trash3-fill tamanhoIcons"></i>
+                  </button>
+                </form>
 
 
-              <form action="deletar.php" method="POST">
-                <button name="btn-delete" class="btn btn-delete">
-                  <i class="bi bi-trash3-fill tamanhoIcons"></i>
-                </button>
-              </form>
-
-
+              </div>
             </div>
           </div>
-        </div>
-
+          
+          <?php
+          
+         } ?>
 
 
 
