@@ -14,7 +14,7 @@ require_once "titulo.php"; ?>
         <div class="card" style="width: 18rem">
           <img src="./img/imagem_meta.png" class="card-img-top" alt="..." />
           <div class="card-body btn-style">
-            <h5 class="card-title centralizar tituloCard">Charles</h5>
+            <h5 class="card-title centralizarCard tituloCard">Charles</h5>
             <p class="card-text overflow text">
               Olá pessoal, tudo bem? Meu nome é Charles, sou essa fofura
               de gato da foto, rs. Olha, eu preciso da sua ajuda para
@@ -28,7 +28,7 @@ require_once "titulo.php"; ?>
         <div class="card" style="width: 18rem">
           <img src="./img/imagem_meta.png" class="card-img-top" alt="..." />
           <div class="card-body btn-style">
-            <h5 class="card-title centralizar tituloCard">Charles</h5>
+            <h5 class="card-title centralizarCard tituloCard">Charles</h5>
             <p class="card-text overflow text">
               Olá pessoal, tudo bem? Meu nome é Charles, sou essa fofura
               de gato da foto, rs. Olha, eu preciso da sua ajuda para
@@ -42,7 +42,7 @@ require_once "titulo.php"; ?>
         <div class="card" style="width: 18rem">
           <img src="./img/imagem_meta.png" class="card-img-top" alt="..." />
           <div class="card-body btn-style">
-            <h5 class="card-title centralizar tituloCard">Charles</h5>
+            <h5 class="card-title centralizarCard tituloCard">Charles</h5>
             <p class="card-text overflow text">
               Olá pessoal, tudo bem? Meu nome é Charles, sou essa fofura
               de gato da foto, rs. Olha, eu preciso da sua ajuda para
@@ -56,7 +56,7 @@ require_once "titulo.php"; ?>
         <div class="card" style="width: 18rem">
           <img src="./img/imagem_meta.png" class="card-img-top" alt="..." />
           <div class="card-body btn-style">
-            <h5 class="card-title centralizar tituloCard">Charles</h5>
+            <h5 class="card-title centralizarCard tituloCard">Charles</h5>
             <p class="card-text overflow text">
               Olá pessoal, tudo bem? Meu nome é Charles, sou essa fofura
               de gato da foto, rs. Olha, eu preciso da sua ajuda para

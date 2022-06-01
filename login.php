@@ -10,7 +10,7 @@ require_once "titulo.php"; ?>
   <?php require_once "navBar.php";
   require_once "feedback.php";
   ?>
-  <section class="fundo login">
+  <section class="fundo padraoTela">
     <div>
       <h1 class="titulo">Login</h1>
       <div class="d-flex justify-content-center container distancia mt-4">

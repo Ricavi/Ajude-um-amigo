@@ -1,28 +1,29 @@
-<?php 
+<?php
 session_start();
 require_once "head.php";
 require_once 'dbconnect.php';
 
 
 if (isset($_SESSION['logado']) == true) :
-  $nomePagina="Adoções criadas";
+  $nomePagina = "Adoções criadas";
   require_once "titulo.php"; ?>
 
   <body>
     <?php require_once "navBar.php";
     require_once "feedback.php";
     ?>
-    <section class="fundo">
+    <section class="fundo padraoTela">
       <h1 class="titulo">Adoções criadas</h1>
       <div class="container d-flex justify-content-around gap-3 tamanho">
         <div class="card" style="width: 18rem">
-          <div class="card-body">
+          <div class="card-body centralizar d-flex">
             <a href="criarAdocao.php">
-              <button class="btn adicionar d-flex">
+              <button class="btn">
                 <i class="bi bi-plus-lg plus"></i>
               </button>
             </a>
           </div>
+          </a>
         </div>
         <?php
         //Abrir a sessão
@@ -48,10 +49,10 @@ if (isset($_SESSION['logado']) == true) :
 
         //PARA NÃO APARECER O ERRO
         if (empty($dadosDescricao)) :
-          $dadosDescricao[0] = ("Nenhuma Descrição encontrada");
+          $dadosDescricao[0] = ("Nenhuma descrição encontrada");
         endif;
         if (empty($ArrayNome)) :
-          $ArrayNome[0] = ("Nenhuma Nome encontrada");
+          $ArrayNome[0] = ("Nenhuma nome encontrado");
         endif;
         if (empty($dadosDiretorio)) :
           $dadosDiretorio[0] = ("./img/no_image.jpg");
@@ -65,7 +66,7 @@ if (isset($_SESSION['logado']) == true) :
                     echo "$dadosDiretorio[0]";
                     ?>" class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title centralizar tituloCard">
+            <h5 class="card-title centralizarCard tituloCard">
               <?php
               echo "$ArrayNome[0]";
               ?>
@@ -78,14 +79,14 @@ if (isset($_SESSION['logado']) == true) :
             <div class="d-flex justify-content-around">
 
               <a href="editarAdoacao.php">
-                <button type="submit" name="btn-editar" class="btn btn-editar ">
+                <button name="btn-editar" class="btn btn-editar ">
                   <i class="bi bi-pencil-fill tamanhoIcons"></i>
                 </button>
               </a>
 
 
               <form action="deletar.php" method="POST">
-                <button type="submit" name="btn-delete" class="btn btn-delete">
+                <button name="btn-delete" class="btn btn-delete">
                   <i class="bi bi-trash3-fill tamanhoIcons"></i>
                 </button>
               </form>

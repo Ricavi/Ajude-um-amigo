@@ -189,7 +189,7 @@ footer li {
 .altura {
   height: 117px;
 }
-.centralizar {
+.centralizarCard {
   display: flex;
   width: max-content;
   margin: auto;
@@ -207,11 +207,9 @@ footer li {
 .plus {
   font-size: 100px;
 }
-.adicionar {
-  margin-top: 60%;
+.centralizar {
+  align-items: center;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 .tituloCard {
   font-weight: bold;
@@ -367,7 +365,7 @@ a:hover {
   transform: rotate(-135deg);
   top: -7px;
 }
-.login {
+.padraoTela {
   height: 90vh;
   display: flex;
   align-items: center;

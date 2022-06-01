@@ -11,16 +11,17 @@ print_r($idBicho[0]);
     //Deletar diretorio
 
     if (unlink("$dadosDiretorio[0]")) :
-        echo "Deletado o diretorio";
-    else :
-        echo "erro ao deletar o diretorio";
+        $_SESSION['mensagem'] = "Diretorio deletado";
+		header('Location:adocoesCriadas');
     endif;
 
 
     if (mysqli_query($connect, $sqlDeletar)) :
-        echo "Deletado do banco de dados";
+        $_SESSION['mensagem'] = "Adoção deletada";
+		header('Location:adocoesCriadas');
     else :
-        echo "Erro ao deletar o banco";
+        $_SESSION['mensagem'] = "Erro ao deletar";
+		header('Location:adocoesCriadas');
     endif;
 
 endif;

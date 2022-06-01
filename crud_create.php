@@ -28,6 +28,7 @@ if (isset($_POST['btn-cadastrar'])) :
 	$senha = trim($senha);
 
 	if ($nome != "" && $senha) :
+		
 		$senhaCripto = password_hash($senha, PASSWORD_BCRYPT);
 
 		$cpf = str_replace(array(".", "-"), "", $_POST['txtCPF']);

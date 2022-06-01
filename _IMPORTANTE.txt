@@ -1,0 +1,1 @@
+Usamos a criptografia bcrypt que usa o algoritmo Blowfish. Gera hashs aleatorias para as senhas.

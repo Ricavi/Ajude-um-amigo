@@ -6,7 +6,7 @@ require_once "titulo.php"; ?>
 
 <body>
   <?php require_once "navBar.php"; ?>
-  <section class="fundo login">
+  <section class="fundo padraoTela">
   <?php require_once "feedback.php"; ?>
     <h1 class="loginTitulo">Cadastro</h1>
     <div class="d-flex justify-content-center container distancia mt-4 formresponsivo">
