@@ -14,9 +14,13 @@ if (isset($_SESSION['logado']) == true) :
     ?>
     <section class="fundo padraoTela">
       <h1 class="titulo">Adoções criadas</h1>
-      <div class="container d-flex justify-content-around gap-3 tamanho">
-        <div class="card" style="width: 18rem">
+      <!--
+        Criar uma DIv externa como Coluna?
+      -->
+      <div class="viniCard container d-flex justify-content-around gap-3 ">
+        <div class="card cardAdd cartaoADD">
           <div class="card-body centralizar d-flex">
+
             <a href="criarAdocao.php">
               <button class="btn">
                 <i class="bi bi-plus-lg plus"></i>
@@ -38,68 +42,54 @@ if (isset($_SESSION['logado']) == true) :
         //Fazer o indice
         //Fazer um botão para aumentar o indice até o count de cima
 
-
-        $sqlDiretorio = "SELECT diretorio FROM bichinho WHERE fk_id='$idUser'";
-        $dadosDiretorio = mysqli_fetch_array(mysqli_query($connect, $sqlDiretorio));
-
-        $sqlDescricao = "SELECT descricao FROM bichinho WHERE fk_id='$idUser'";
-        $dadosDescricao = mysqli_fetch_array(mysqli_query($connect, $sqlDescricao));
-
         $bichos = mysqli_query($connect, $sqlBicho);
 
-        //PARA NÃO APARECER O ERRO
-        if (empty($dadosDescricao)) :
-          $dadosDescricao[0] = ("Nenhuma descrição encontrada");
-        endif;
-        if (empty($arrayNome)) :
-          $arrayNome[0] = ("Nenhuma nome encontrado");
-        endif;
-        if (empty($dadosDiretorio)) :
-          $dadosDiretorio[0] = ("./img/no_image.jpg");
-        endif;
 
         ?>
-      
-        <?php while ($dados=mysqli_fetch_array($bichos)) { ?>
-          <div class="card" style="width: 18rem">
-            <img src="<?php echo $dados['diretorio'];?>" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title centralizarCard tituloCard">
-                <?php
-                echo $dados['nome'];
-                ?>
-              </h5>
-              <p class="card-text overflow text">
-                <?php
-                echo $dados['descricao'];
-                ?>
-              </p>
-              <div class="d-flex justify-content-around">
+        <div class="VAIDARCERTO">
+          <?php while ($dados = mysqli_fetch_array($bichos)) { ?>
+            <div class="card BATATA" style="width: 18rem">
+              <img src="<?php echo $dados['diretorio']; ?>" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title centralizarCard tituloCard">
+                  <?php
+                  echo $dados['nome'];
+                  ?>
+                </h5>
+                <p class="card-text overflow text">
+                  <?php
+                  echo $dados['descricao'];
+                  ?>
+                </p>
+                <div class="d-flex justify-content-around">
+                <form action="editarAdoacao.php" method="POST">
 
-                <a href="editarAdoacao.php">
-                  <button name="btn-editar" class="btn btn-editar ">
-                    <i class="bi bi-pencil-fill tamanhoIcons"></i>
-                  </button>
-                </a>
+                  
+                    <button name="btn-editar" class="btn btn-editar ">
+                    <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
 
-
-                <form action="deletar.php" method="POST">
-                  <button name="btn-delete" class="btn btn-delete">
-                    <i class="bi bi-trash3-fill tamanhoIcons"></i>
-                  </button>
+                      <i class="bi bi-pencil-fill tamanhoIcons"></i>
+                    </button>
                 </form>
 
 
+                  <form action="deletar.php" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
+                    <button name="btn-delete" class="btn btn-delete">
+                      <i class="bi bi-trash3-fill tamanhoIcons"></i>
+                    </button>
+                  </form>
+
+
+                </div>
               </div>
             </div>
-          </div>
-          
+
           <?php
-          
-         } ?>
+          } ?>
 
 
-
+        </div>
       </div>
     </section>
   <?php require_once "footer.php";

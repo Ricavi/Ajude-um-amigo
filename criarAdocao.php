@@ -1,10 +1,10 @@
-<?php 
+<?php
 session_start();
 require_once "head.php";
 
 if (isset($_SESSION['logado']) == true) :
   require_once "head.php";
-  $nomePagina="Criar adoção";
+  $nomePagina = "Criar adoção";
   require_once "titulo.php"; ?>
 
   <body>
@@ -41,7 +41,7 @@ if (isset($_SESSION['logado']) == true) :
             <div class="btnvini d-flex gap-2 mt-2">
               <label for="imagemBicho">Adicionar imagem</label>
 
-              <input name="imagemBicho" id="imagemBicho" onchange="preview()" type="file" src="" accept=".jpg, .jpeg, .pnp, .avif" required>
+              <input name="imagemBicho" id="imagemBicho" onchange="preview()" type="file" src="" accept=".jpg, .jpeg, .png, .avif" required>
 
               <script>
                 function preview() {

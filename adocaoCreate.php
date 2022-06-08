@@ -5,7 +5,6 @@ session_start();
 require_once 'dbconnect.php';
 
 if (isset($_POST['btn-criar-adocao'])) :
-    $erros = array();
 
 
     //BANCO DE DADOS

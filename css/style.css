@@ -121,6 +121,10 @@
 .textTamanho {
   max-width: 370px;
 }
+
+
+
+
 .text {
   margin-top: 20px;
   text-align: justify;
@@ -366,7 +370,7 @@ a:hover {
   top: -7px;
 }
 .padraoTela {
-  height: 90vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -425,3 +429,37 @@ height: 30px;
 .btnvini input[type="file"]:hover{
   cursor: pointer;
 }
+
+.viniCard{
+  display: flex;
+  width: 100%;
+  height: auto;  
+  
+  /*flex-direction: row;
+*/
+  
+}
+
+.cartaoADD{
+  height: 441px;
+  width: 288px;
+  margin-right: 50px;
+  margin-bottom: 35px;
+}
+.VAIDARCERTO{
+  max-width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  margin-bottom: 35px;
+}
+.BATATA{
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+/*
+
+flex-wrap: wrap;
+  height: auto;
+
+*/

@@ -22,7 +22,7 @@ require_once "titulo.php"; ?>
               fui abandonado e agora eu preciso encontrar novos donos. Que
               tal me ajudar nessa?
             </p>
-            <a href="../Ajudeumamigo/chat"><button class="btn btn-am">Adotar</button></a>
+            <a href="chat"><button class="btn btn-am">Adotar</button></a>
           </div>
         </div>
         <div class="card" style="width: 18rem">
@@ -36,7 +36,7 @@ require_once "titulo.php"; ?>
               fui abandonado e agora eu preciso encontrar novos donos. Que
               tal me ajudar nessa?
             </p>
-            <a href="../Ajudeumamigo/chat"><button class="btn btn-am">Adotar</button></a>
+            <a href="chat"><button class="btn btn-am">Adotar</button></a>
           </div>
         </div>
         <div class="card" style="width: 18rem">
@@ -50,7 +50,7 @@ require_once "titulo.php"; ?>
               fui abandonado e agora eu preciso encontrar novos donos. Que
               tal me ajudar nessa?
             </p>
-            <a href="../Ajudeumamigo/chat"><button class="btn btn-am">Adotar</button></a>
+            <a href="chat"><button class="btn btn-am">Adotar</button></a>
           </div>
         </div>
         <div class="card" style="width: 18rem">
@@ -64,7 +64,7 @@ require_once "titulo.php"; ?>
               fui abandonado e agora eu preciso encontrar novos donos. Que
               tal me ajudar nessa?
             </p>
-            <a href="../Ajudeumamigo/chat"><button class="btn btn-am">Adotar</button></a>
+            <a href="chat"><button class="btn btn-am">Adotar</button></a>
           </div>
         </div>
       </div>
