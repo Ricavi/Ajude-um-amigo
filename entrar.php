@@ -56,7 +56,10 @@ if (isset($_POST['btn-entrar'])) :
 				header('Location:login.php');
 			endif;
 		else :
+			$_SESSION['mensagem'] = "Usuario não Cadastrado";
+
 			echo $sql;
+			header('Location:cadastro.php');
 
 
 		endif;
