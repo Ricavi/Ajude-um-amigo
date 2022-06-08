@@ -30,8 +30,7 @@ if (isset($_POST['btn-criar-adocao'])) :
         $sqlBicho = "INSERT INTO bichinho(nome, diretorio ,descricao, fk_id) VALUES ('$nome','X','$descricao','$idUser')";
         if (mysqli_query($connect, $sqlBicho)) :
         endif;
-
-        $sqlBichoId = "SELECT id FROM bichinho WHERE nome='$nome' and fk_id='$idUser'";
+        $sqlBichoId = "SELECT id FROM bichinho WHERE nome='$nome' and fk_id='$idUser' ORDER BY id DESC";
         $sqlBichoId = mysqli_fetch_array(mysqli_query($connect, $sqlBichoId));
 
 

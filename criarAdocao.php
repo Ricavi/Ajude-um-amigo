@@ -40,7 +40,7 @@ if (isset($_SESSION['logado']) == true) :
 
             <div class="btnvini d-flex gap-2 mt-2">
               <label for="imagemBicho">Adicionar imagem</label>
-
+              
               <input name="imagemBicho" id="imagemBicho" onchange="preview()" type="file" src="" accept=".jpg, .jpeg, .png, .avif" required>
 
               <script>
