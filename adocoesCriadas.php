@@ -12,7 +12,7 @@ if (isset($_SESSION['logado']) == true) :
     <?php require_once "navBar.php";
     require_once "feedback.php";
     ?>
-    <section class="fundo padraoTela">
+    <section class="fundo">
       <h1 class="titulo">Adoções criadas</h1>
       <!--
         Criar uma DIv externa como Coluna?
@@ -46,10 +46,10 @@ if (isset($_SESSION['logado']) == true) :
 
 
         ?>
-        <div class="VAIDARCERTO">
+        <div class="VAIDARCERTO container">
           <?php while ($dados = mysqli_fetch_array($bichos)) { ?>
             <div class="card BATATA" style="width: 18rem">
-              <img src="<?php echo $dados['diretorio']; ?>" class="card-img-top" alt="..." />
+              <img src="<?php echo $dados['diretorio']; ?>" class="card-img-top cardImg" alt="..." />
               <div class="card-body">
                 <h5 class="card-title centralizarCard tituloCard">
                   <?php

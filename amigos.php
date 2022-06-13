@@ -11,7 +11,7 @@ require_once 'dbconnect.php'; ?>
   <section class="fundo">
     <h1 class="titulo">Amigos</h1>
     <div>
-      <div class="VAIDARCERTO1">
+      <div class="VAIDARCERTO1 justify-content-center">
         <?php
         $sqlBicho = "SELECT * FROM bichinho";
         $bichos = mysqli_query($connect, $sqlBicho);
@@ -24,7 +24,7 @@ require_once 'dbconnect.php'; ?>
               <!-- 
           Imagem
         -->
-              <img src="<?php echo $dados['diretorio']; ?>" class="card-img-top" alt="..." />
+              <img src="<?php echo $dados['diretorio']; ?>" class="card-img-top cardImg" alt="..." />
               <div class="card-body btn-style">
                 <!-- 
           Nome do Animal

@@ -12,6 +12,7 @@
 }
 
 .fundo {
+  height: auto;
   mix-blend-mode: normal;
   background: #edd9ce;
   display: flex;
@@ -370,7 +371,7 @@ a:hover {
   top: -7px;
 }
 .padraoTela {
-  height: auto;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -476,4 +477,9 @@ flex-wrap: wrap;
   margin-bottom: 35px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.cardImg{
+  height: 50%;
+  width: auto;
 }
