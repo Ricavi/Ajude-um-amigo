@@ -13,6 +13,7 @@ if (isset($_POST['btn-delete'])) :
         header('Location:adocoesCriadas');
     endif;
 
+    
 
     if (mysqli_query($connect, $sqlDeletar)) :
         $_SESSION['mensagem'] = "Adoção deletada";

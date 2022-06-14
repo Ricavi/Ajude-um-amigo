@@ -40,6 +40,7 @@ require_once 'dbconnect.php'; ?>
                 <p class="card-text overflow text">
                   <?php
                   echo $dados['descricao'];
+                  
                   ?>
                 </p>
                 <a href="chat"><button class="btn btn-am">Adotar</button></a>
