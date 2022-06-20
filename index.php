@@ -1,11 +1,12 @@
-<?php 
+<?php
 session_start();
 require_once "head.php";
-$nomePagina="Home";
+$nomePagina = "Home";
 require_once "titulo.php";
 ?>
+
 <body>
-<?php require_once "navBar.php";
+  <?php require_once "navBar.php";
   require_once "feedback.php";
   ?>
   <section class="gradient">
@@ -21,7 +22,7 @@ require_once "titulo.php";
             <div class="d-flex meta justify-content-around align-items-center distancia charles">
               <img src="./img/imagem_meta.png" alt="Gato" class="gato" />
               <div class="textTamanho btn-style ">
-                <h1 class="centralizar subtitulo ">Charles</h1>
+                <h1 class="centralizarCard subtitulo ">Charles</h1>
                 <p class="text">
                   Olá pessoal, tudo bem? Meu nome é Charles, sou essa fofura
                   de gato da foto, rs. Olha, eu preciso da sua ajuda para

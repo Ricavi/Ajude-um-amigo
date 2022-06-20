@@ -209,12 +209,13 @@ footer li {
 .tamanhoIcons {
   font-size: 25px;
 }
+.loginIcon {
+  font-size: 30px;
+  align-self: baseline;
+  color: black;
+}
 .plus {
   font-size: 100px;
-}
-.centralizar {
-  align-items: center;
-  justify-content: center;
 }
 .tituloCard {
   font-weight: bold;
