@@ -20,6 +20,6 @@
         </ul>
     </nav>
     <div>
-    <a href="./login"><i class="bi bi-person-circle tamanhoIcons"></i>Login/Cadastro</a>
+        <a href="./login"><i class="bi bi-person-circle tamanhoIcons"></i>Login/Cadastro</a>
     </div>
 </header>

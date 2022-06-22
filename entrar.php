@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once 'dbconnect.php';
+require_once 'TreadSigle.php';
 
 //se existir o indice btn_entrar , é porque alguem clicou no botão
 if (isset($_POST['btn-entrar'])) :
@@ -22,9 +22,23 @@ if (isset($_POST['btn-entrar'])) :
 
 		$sql = "SELECT senha from usuario where email='$email'";
 
+
+
+
+		/*
+		Colocar os dados do JSON na variavel já existente.
+		*/
+
 		$resultado = mysqli_query($connect, $sql);
 		$dadosSenha = mysqli_fetch_array($resultado);
 		//fechando a conexão depois de armazenar os dados
+
+
+
+
+
+
+
 
 
 		//numeros de linhas do resultado da query maior que 0 ou Se houver algum registro na tabela
