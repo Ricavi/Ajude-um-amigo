@@ -12,38 +12,40 @@ if (isset($_SESSION['logado']) == true) :
     <?php require_once "navBar.php";
     require_once "feedback.php";
     ?>
-    <section class="fundo">
+    <section class="fundo telaBichos">
       <h1 class="titulo">Adoções criadas</h1>
       <!--
         Criar uma DIv externa como Coluna?
       -->
       <div class="viniCard container d-flex justify-content-around gap-3 ">
-        <div class="card cardAdd cartaoADD">
+        <div class="card cartaoADD">
           <div class="card-body centralizar d-flex">
-
-            <a href="criarAdocao.php">
+            <a href="./criarAdocao">
               <button class="btn">
                 <i class="bi bi-plus-lg plus"></i>
               </button>
             </a>
           </div>
-          </a>
+
         </div>
+
         <?php
         $idUser = $_SESSION['id_user'];
-        $sqlBicho = "SELECT * FROM bichinho WHERE fk_id='$idUser'";
-        $dadosBicho = mysqli_fetch_array(mysqli_query($connect, $sqlBicho));
-        $_SESSION['id_bicho'] = $dadosBicho;
 
+        if ($idUser == 1) {
+          $sqlBicho = "SELECT * FROM bichinho";
+          $bichos = mysqli_query($connect, $sqlBicho);
+        } else {
 
-        $sqlNome = "SELECT nome FROM bichinho WHERE fk_id='$idUser'";
-        $dadosNome = mysqli_query($connect, $sqlNome);
-        $arrayNome = mysqli_fetch_row($dadosNome);
-        //Fazer o indice
-        //Fazer um botão para aumentar o indice até o count de cima
+          $sqlBicho = "SELECT * FROM bichinho WHERE fk_id='$idUser'";
+          $dadosBicho = mysqli_fetch_array(mysqli_query($connect, $sqlBicho));
+          $_SESSION['id_bicho'] = $dadosBicho;
 
-        $bichos = mysqli_query($connect, $sqlBicho);
+          //Fazer o indice
+          //Fazer um botão para aumentar o indice até o count de cima
 
+          $bichos = mysqli_query($connect, $sqlBicho);
+        }
 
         ?>
         <div class="VAIDARCERTO container">
@@ -62,15 +64,15 @@ if (isset($_SESSION['logado']) == true) :
                   ?>
                 </p>
                 <div class="d-flex justify-content-around">
-                <form action="editarAdoacao.php" method="POST">
+                  <form action="editarAdoacao.php" method="POST">
 
-                  
+
                     <button name="btn-editar" class="btn btn-editar ">
-                    <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
+                      <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
 
                       <i class="bi bi-pencil-fill tamanhoIcons"></i>
                     </button>
-                </form>
+                  </form>
 
 
                   <form action="deletar.php" method="POST">

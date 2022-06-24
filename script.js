@@ -17,6 +17,7 @@ function toggleMenu(event) {
 btnMobile.addEventListener("click", toggleMenu);
 btnMobile.addEventListener("touchstart", toggleMenu);
 
+
 //ativar o toast
 window.onload = function () {
   var toastElList = [].slice.call(document.querySelectorAll(".toast"));
@@ -26,3 +27,19 @@ window.onload = function () {
   toastList.forEach((toast) => toast.show());
 };
 
+
+//scroll para seções
+let navBtn = $('.nav-item');
+let infoSection = $('#info');
+let scrolTo = '';
+
+$(navBtn).click(function(){
+  let btnID = $(this).attr('id');
+  if(btnId == 'info'){
+    scrolTo = infoSection;
+  }
+
+  $([document.documentElement, document.body]).animate({
+    scrollTop: $(scrollTo).offset().top - 70
+  }, 1500);
+})

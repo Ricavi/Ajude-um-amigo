@@ -3,11 +3,9 @@
 }
 
 .gradient {
-  background: linear-gradient(
-    180deg,
-    #ecd8cd 85.55%,
-    rgba(255, 255, 255, 0.3) 100%
-  );
+  background: linear-gradient(180deg,
+      #ecd8cd 85.55%,
+      rgba(255, 255, 255, 0.3) 100%);
   mix-blend-mode: normal;
 }
 
@@ -23,6 +21,7 @@
   margin: 0 0 0 0;
   font-family: "IBM Plex Sans Arabic", sans-serif;
 }
+
 /*
 
   Meta Do Dia
@@ -44,6 +43,7 @@
   margin-right: auto;
   display: flex;
 }
+
 .tituloMeta {
   white-space: nowrap;
   display: flex;
@@ -53,11 +53,13 @@
   padding-bottom: 20px;
   padding-top: 30px;
 }
+
 .tituloMeta h1 {
   color: #ffffff;
   font-size: 38px;
   font-weight: bold;
 }
+
 .titulo {
   white-space: nowrap;
   display: flex;
@@ -93,32 +95,39 @@
   width: 100vw;
   background-color: #ffffff;
 }
+
 .tituloQuemSomos {
   padding-top: 100px;
   white-space: nowrap;
   text-align: center;
 }
+
 .tituloQuemSomos h1 {
   font-size: 40px;
   font-weight: 700;
 }
+
 .sobreNos {
   padding-top: 125px;
   width: 370px;
   text-align: center;
   margin-bottom: 30px;
 }
+
 .sobreNos h1 {
   font-size: 18px;
   font-weight: 700;
 }
+
 .conteinerHorizontal {
   display: flex;
   justify-content: space-around;
 }
+
 .conteinerHorizontal div {
   text-align: center;
 }
+
 .textTamanho {
   max-width: 370px;
 }
@@ -132,6 +141,7 @@
   color: #525252;
   font-size: 13px;
 }
+
 /*
 
   Quem Somos
@@ -155,14 +165,17 @@ footer {
   justify-content: space-around;
   padding-bottom: 25px;
 }
+
 footer div {
   padding-top: 12px;
 }
+
 footer h1 {
   padding-bottom: 5px;
   font-weight: 400;
   font-size: 18px;
 }
+
 footer li {
   display: flex;
   flex-direction: column;
@@ -186,47 +199,70 @@ footer li {
   margin-top: 60px;
   border: 2px solid #a1897c;
 }
+
 .btn-am {
   display: flex;
   margin-left: auto;
   margin-right: auto;
 }
+
 .altura {
   height: 117px;
 }
+
 .centralizarCard {
   display: flex;
   width: max-content;
   margin: auto;
 }
+
 .overflow {
   height: 100px;
   overflow: auto;
 }
+
 .tamanho {
   padding-bottom: 120px;
 }
+
 .tamanhoIcons {
   font-size: 25px;
 }
+
 .loginIcon {
   font-size: 30px;
-  align-self: baseline;
   color: black;
 }
+
+.loginDiv{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.logintxt{
+  color: black;
+  font-size: 13px;
+  margin-bottom: 0rem;
+}
+
 .plus {
   font-size: 100px;
+  color: black;
 }
+
 .tituloCard {
   font-weight: bold;
 }
+
 label {
   width: 80px;
 }
+
 .btn-ctt {
   display: flex;
   margin: auto;
 }
+
 .input {
   position: relative;
   display: flex;
@@ -234,6 +270,7 @@ label {
   align-items: stretch;
   width: 300px;
 }
+
 .btnAddImg {
   width: 300px;
   height: 300px;
@@ -241,11 +278,13 @@ label {
   background-image: #525252;
   text-align: center;
   font-size: 30px;
-  object-fit:cover;
+  object-fit: cover;
 }
+
 .distancia {
   padding-bottom: 180px;
 }
+
 .btnEditImg {
   width: 300px;
   height: 300px;
@@ -264,6 +303,7 @@ label {
   width: 530px;
   height: 585px;
 }
+
 .backgroundMenu {
   background: #525252;
 }
@@ -331,12 +371,14 @@ a:hover {
   visibility: visible;
   overflow-y: auto;
 }
+
 #menu a {
   display: block;
   padding: 1rem 0;
   margin: 0 1rem;
   border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 }
+
 #btn-mobile {
   display: flex;
   padding: 0.5rem 1rem;
@@ -346,10 +388,12 @@ a:hover {
   cursor: pointer;
   gap: 0.5rem;
 }
+
 #hamburger {
   border-top: 2px solid;
   width: 20px;
 }
+
 #hamburger::after,
 #hamburger::before {
   content: "";
@@ -361,22 +405,27 @@ a:hover {
   transition: 0.3s;
   position: relative;
 }
+
 #nav.active #hamburger {
   border-top-color: transparent;
 }
+
 #nav.active #hamburger::before {
   transform: rotate(135deg);
 }
+
 #nav.active #hamburger::after {
   transform: rotate(-135deg);
   top: -7px;
 }
+
 .padraoTela {
   height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .loginTitulo {
   white-space: nowrap;
   display: flex;
@@ -406,6 +455,7 @@ a:hover {
   footer h1 {
     font-size: 13px;
   }
+
   footer li {
     font-size: 8px;
   }
@@ -416,61 +466,71 @@ a:hover {
 }
 
 
-.btnvini input[type="file"]{
-border-style: solid;
-border-color: rgba(118,118,118,255);
-border-width: 1px;
-background-color: white;
-width: 300px;
-height: 30px;
+.btnvini input[type="file"] {
+  border-style: solid;
+  border-color: rgba(118, 118, 118, 255);
+  border-width: 1px;
+  background-color: white;
+  width: 300px;
+  height: 30px;
 }
 
-.btnvini input[type="file"]::file-selector-button{
+.btnvini input[type="file"]::file-selector-button {
   display: none;
 }
-.btnvini input[type="file"]:hover{
+
+.btnvini input[type="file"]:hover {
   cursor: pointer;
 }
 
-.viniCard{
+.viniCard {
   display: flex;
   width: 100%;
-  height: auto;  
-  
+  height: auto;
+
   /*flex-direction: row;
 */
-  
+
 }
 
-.cartaoADD{
+.cartaoADD {
   height: 441px;
   width: 288px;
   margin-right: 50px;
   margin-bottom: 35px;
+  -webkit-user-modify: read-write-plaintext-only;
 }
-.VAIDARCERTO{
+
+.cartaoADD a {
+  height: auto;
+  width: auto;
+}
+
+.VAIDARCERTO {
   max-width: 1500px;
   display: flex;
   flex-wrap: wrap;
   height: auto;
   margin-bottom: 35px;
 }
-.BATATA{
+
+.BATATA {
   margin-left: 25px;
   margin-bottom: 20px;
 }
+
 /*
 
 flex-wrap: wrap;
   height: auto;
 
 */
-.BATATA1{
+.BATATA1 {
   margin-left: 25px;
   margin-bottom: 20px;
 }
 
-.VAIDARCERTO1{
+.VAIDARCERTO1 {
   display: flex;
   max-width: 1500px;
   height: auto;
@@ -480,7 +540,11 @@ flex-wrap: wrap;
   margin-right: auto;
 }
 
-.cardImg{
+.cardImg {
   height: 50%;
   width: auto;
+}
+
+.telaBichos{
+  height: 90vh;
 }

@@ -9,20 +9,9 @@ require_once "titulo.php"; ?>
   <?php require_once "navBar.php"; ?>
   <section class="fundo padraoTela">
     <h1 class="titulo">Fale conosco</h1>
-    <div class="d-flex justify-content-around align-items-center container">
-      <div>
-        <img class="cachorroFone" src="./img/imagem_contato.png" alt="" />
-      </div>
+    <div class="d-flex justify-content-around container justify-content-center mt-4">
       <div>
         <form class="d-flex flex-column" action="">
-          <div class="d-flex gap-2">
-            <label for="">Nome</label>
-            <input type="text" class="input" />
-          </div>
-          <div class="d-flex gap-2 mt-2">
-            <label for="">Email</label>
-            <input type="text" class="input" />
-          </div>
           <div class="d-flex gap-2 mt-2">
             <label for="">Assunto</label>
             <input type="text" class="input" />

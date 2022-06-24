@@ -8,7 +8,7 @@ require_once 'dbconnect.php'; ?>
 
 <body>
   <?php require_once "navBar.php"; ?>
-  <section class="fundo">
+  <section class="fundo telaBichos">
     <h1 class="titulo">Amigos</h1>
     <div>
       <div class="VAIDARCERTO1 justify-content-center">

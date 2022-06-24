@@ -39,7 +39,7 @@ require_once "titulo.php";
     </article>
   </section>
 
-  <article class="quemSomos container distancia" id="ancora">
+  <article class="quemSomos container distancia" id="info">
     <div class="tituloQuemSomos">
       <h1>Quem somos</h1>
     </div>

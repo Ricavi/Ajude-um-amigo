@@ -11,6 +11,7 @@
             <?php endif;
             ?>
             <li><a href="./amigos">Amigos</a></li>
+            <li><a id="infoBtn">Quem Somos</a></li>
             <li><a href="./contatos">Contato</a></li>
             <?php if (isset($_SESSION['logado']) == true) : ?>
                 <li><a href="./adocoesCriadas">Minhas adoções</a></li>
@@ -19,7 +20,9 @@
             ?>
         </ul>
     </nav>
-    <div>
-    <a href="./login"><i class="bi bi-person-circle tamanhoIcons"></i>Login/Cadastro</a>
+    <div class="loginDiv">
+        <a href="./login"><i class="bi bi-person-circle loginIcon"></i>
+            <p class="logintxt">Login/Cadastro</p>
+        </a>
     </div>
 </header>
