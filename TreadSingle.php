@@ -19,7 +19,8 @@ $post -> read_single();
 
 //monta o array que será retornado.
 $post_arr= array(
-	'id' => $post->id,
+	'id'=> $post->id,
+	'senha' => $post->senha,
 	'email' => $post->email
 );
 
