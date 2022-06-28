@@ -11,8 +11,6 @@ require_once "titulo.php";
 <body>
   <?php require_once "navBar.php";
   require_once "feedback.php";
-  $tempo = mysqli_fetch_array(mysqli_query($connect,"SELECT curdate()"));
-  echo($tempo[0])
   ?>
   <section class="gradient">
     <article>
