@@ -216,6 +216,12 @@ footer li {
   margin: auto;
 }
 
+.centralizar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .overflow {
   height: 100px;
   overflow: auto;
@@ -515,12 +521,16 @@ a:hover {
   width: 288px;
   margin-right: 50px;
   margin-bottom: 35px;
-  -webkit-user-modify: read-write-plaintext-only;
 }
 
 .cartaoADD a {
-  height: auto;
-  width: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.cartaoADD div {
+  flex: 1 1 auto;
+  padding: 0px;
 }
 
 .VAIDARCERTO {

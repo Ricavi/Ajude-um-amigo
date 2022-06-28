@@ -1,13 +1,18 @@
 <?php
 session_start();
 require_once "head.php";
+require_once 'dbconnect.php';
 $nomePagina = "Home";
 require_once "titulo.php";
+//curdate() para verificar a data do bicho do dia
+//verificar a data em um txt
 ?>
 
 <body>
   <?php require_once "navBar.php";
   require_once "feedback.php";
+  $tempo = mysqli_fetch_array(mysqli_query($connect,"SELECT curdate()"));
+  echo($tempo[0])
   ?>
   <section class="gradient">
     <article>

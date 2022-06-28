@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 class POST{
 
@@ -15,7 +16,7 @@ class POST{
 
     public function read(){
 		//Criando query
-		$query = 'SELECT senha, email FROM ' . $this->table . ' ORDER BY id ASC';
+		$query = 'SELECT id,senha, email FROM ' . $this->table . ' ORDER BY id ASC';
 		
 		//Preparando a execução da consulta
 		$stmt = $this->conn->prepare($query);
@@ -29,22 +30,24 @@ class POST{
 
     public function read_single(){
 		//Criando query
-		$query = 'SELECT id,senha, email FROM ' . $this->table . ' WHERE id = ? LIMIT 1';
+		$query = 'SELECT senha, id FROM ' . $this->table . ' WHERE email = ? LIMIT 1';
 		
 		//Preparando a execução da consulta
 		$stmt = $this->conn->prepare($query);
 		
 		//Indicando o parâmetro na consulta
-		$stmt->bindParam(1,$this->id);
+		$stmt->bindParam(1,$this->email);
 		
 		//Executa query
 		$stmt->execute();
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
-		
-		$this->id = $row['id'];
+		if($row['senha']!=null){
 		$this->senha = $row['senha'];
-		$this->email = $row['email'];
-		
+		$this->id = $row['id'];
+	} else {
+		$_SESSION['mensagem'] = "E-mail inválido!";
+		header('Location:login.php');
+	}
 	
 		return $stmt;
 		
@@ -134,4 +137,3 @@ class POST{
 
 
 }
-?>

@@ -19,8 +19,8 @@ if (isset($_SESSION['logado']) == true) :
       -->
       <div class="viniCard container d-flex justify-content-around gap-3 ">
         <div class="card cartaoADD">
-          <div class="card-body centralizar d-flex">
-            <a href="./criarAdocao">
+          <div class=" d-flex">
+            <a href="./criarAdocao" class="centralizar">
               <button class="btn">
                 <i class="bi bi-plus-lg plus"></i>
               </button>
