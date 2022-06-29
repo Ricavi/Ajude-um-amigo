@@ -11,6 +11,15 @@ require_once "titulo.php";
 <body>
   <?php require_once "navBar.php";
   require_once "feedback.php";
+
+  $sqlTempoBd = "SELECT * FROM `tempo`";
+  $tempoBd = mysqli_fetch_array(mysqli_query($connect, $sqlTempoBd));
+  $sqlTempoAtual = "SELECT Day(now())";
+  $tempoAtual = mysqli_fetch_array(mysqli_query($connect, $sqlTempoAtual));
+  echo $tempoAtual[0];
+  if ($tempoBd[0] != $tempoAtual[0]) {
+    //if caso não tenha imagens no banco
+  }
   ?>
   <section class="gradient">
     <article>

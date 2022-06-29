@@ -12,7 +12,7 @@ if (isset($_SESSION['logado']) == true) :
     <?php require_once "navBar.php";
     require_once "feedback.php";
     ?>
-    <section class="fundo telaBichos">
+    <section class="fundo">
       <h1 class="titulo">Adoções criadas</h1>
       <!--
         Criar uma DIv externa como Coluna?
