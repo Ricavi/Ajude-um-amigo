@@ -14,9 +14,6 @@ if (isset($_SESSION['logado']) == true) :
     ?>
     <section class="fundo">
       <h1 class="titulo">Adoções criadas</h1>
-      <!--
-        Criar uma DIv externa como Coluna?
-      -->
       <div class="viniCard container d-flex justify-content-around gap-3 ">
         <div class="card cartaoADD">
           <div class=" d-flex">
@@ -34,18 +31,16 @@ if (isset($_SESSION['logado']) == true) :
 
         if ($idUser == 1) {
           $sqlBicho = "SELECT * FROM bichinho";
-          $bichos = mysqli_query($connect, $sqlBicho);
+          $dadosBicho = mysqli_fetch_array(mysqli_query($connect, $sqlBicho));
         } else {
-
           $sqlBicho = "SELECT * FROM bichinho WHERE fk_id='$idUser'";
           $dadosBicho = mysqli_fetch_array(mysqli_query($connect, $sqlBicho));
           $_SESSION['id_bicho'] = $dadosBicho;
-
+        }
           //Fazer o indice
           //Fazer um botão para aumentar o indice até o count de cima
-
           $bichos = mysqli_query($connect, $sqlBicho);
-        }
+        
 
         ?>
         <div class="VAIDARCERTO container">

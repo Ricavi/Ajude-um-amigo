@@ -12,13 +12,23 @@ require_once "titulo.php";
   <?php require_once "navBar.php";
   require_once "feedback.php";
 
+  //Atualizar o "Amigo do dia"
   $sqlTempoBd = "SELECT * FROM `tempo`";
   $tempoBd = mysqli_fetch_array(mysqli_query($connect, $sqlTempoBd));
   $sqlTempoAtual = "SELECT Day(now())";
   $tempoAtual = mysqli_fetch_array(mysqli_query($connect, $sqlTempoAtual));
-  echo $tempoAtual[0];
   if ($tempoBd[0] != $tempoAtual[0]) {
-    //if caso não tenha imagens no banco
+    $sqlAnimal = "SELECT * FROM bichinho ORDER BY RAND()";
+    $dadosAnimal = mysqli_fetch_array(mysqli_query($connect, $sqlAnimal));
+    $sql = "UPDATE `tempo` SET `data` = '$tempoAtual[0]'";
+    mysqli_query($connect, $sql);
+    $sql = "UPDATE `tempo` SET `idAnimal` = '$dadosAnimal[id]'";
+    mysqli_query($connect, $sql);
+  } else {
+    $sqlTempo = "SELECT * FROM tempo";
+    $dadosTempo = mysqli_fetch_array(mysqli_query($connect, $sqlTempo));
+    $sqlAnimal = "SELECT * FROM bichinho WHERE id = '$dadosTempo[idAnimal]'";
+    $dadosAnimal = mysqli_fetch_array(mysqli_query($connect, $sqlAnimal));
   }
   ?>
   <section class="gradient">
@@ -32,15 +42,16 @@ require_once "titulo.php";
               </div>
             </div>
             <div class="d-flex meta justify-content-around align-items-center distancia charles">
-              <img src="./img/imagem_meta.png" alt="Gato" class="gato" />
+              <img src="<?php echo $dadosAnimal['diretorio']; ?>" alt="" class="" />
               <div class="textTamanho btn-style ">
-                <h1 class="centralizarCard subtitulo ">Charles</h1>
+                <h1 class="centralizarCard subtitulo">
+                  <?php
+                  echo $dadosAnimal['nome'];
+                  ?></h1>
                 <p class="text">
-                  Olá pessoal, tudo bem? Meu nome é Charles, sou essa fofura
-                  de gato da foto, rs. Olha, eu preciso da sua ajuda para
-                  conseguir um lar! Isso é muito importante para mim, infelizmente
-                  fui abandonado e agora eu preciso encontrar novos donos. Que
-                  tal me ajudar nessa?
+                <?php
+                  echo $dadosAnimal['descricao'];
+                  ?>
                 </p>
                 <a href="chat"><button class="btn btn-am">Adotar</button></a>
               </div>

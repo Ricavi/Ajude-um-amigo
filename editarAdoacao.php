@@ -7,15 +7,7 @@ if (isset($_SESSION['logado']) == true) :
   require_once "titulo.php"; ?>
 
   <body>
-    <?php require_once "navBar.php"; ?>
-
-
-
-
-
-
-    <?php
-    //Abrir a sessão
+    <?php require_once "navBar.php";
     require_once 'dbconnect.php';
 
 
@@ -27,23 +19,8 @@ if (isset($_SESSION['logado']) == true) :
     //variaveis do banco de dados
     $idPost = $_POST['id'];
     $idUser = $_SESSION['id_user'];
-    $sqlBicho = "SELECT id FROM bichinho WHERE fk_id='$idUser' and id='$idPost'";
+    $sqlBicho = "SELECT * FROM bichinho WHERE id='$idPost'";
     $dadosBicho = mysqli_fetch_array(mysqli_query($connect, $sqlBicho));
-    $_SESSION['id_bicho'] = $dadosBicho;
-
-
-    $sqlNome = "SELECT nome FROM bichinho WHERE fk_id='$idUser'and id='$idPost'";
-    $dadosNome = mysqli_fetch_array(mysqli_query($connect, $sqlNome));
-    $_SESSION['nome_bicho'] = $dadosNome;
-
-
-    $sqlDiretorio = "SELECT diretorio FROM bichinho WHERE fk_id='$idUser'and id='$idPost'";
-    $dadosDiretorio = mysqli_fetch_array(mysqli_query($connect, $sqlDiretorio));
-    $_SESSION['diretorio'] = $dadosDiretorio;
-    $sqlDescricao = "SELECT descricao FROM bichinho WHERE fk_id='$idUser'and id='$idPost'";
-    $dadosDescricao = mysqli_fetch_array(mysqli_query($connect, $sqlDescricao));
-
-
     ?>
 
 
@@ -57,7 +34,7 @@ if (isset($_SESSION['logado']) == true) :
         <div>
           <img id="imagemPreview" class="btnAddImg mt-2" src="
         <?php
-        echo "$dadosDiretorio[0]";
+        echo $dadosBicho['diretorio'];
         ?>" alt="" onerror='this.style.display = "none"' onload='this.style.display = "block"'>
         </div>
         <div>
@@ -67,7 +44,7 @@ if (isset($_SESSION['logado']) == true) :
           <form action="editar.php" method="POST" enctype="multipart/form-data">
             <div class="d-flex gap-2">
               <label for="">Nome</label>
-              <input placeholder="<?php echo "$dadosNome[0]"; ?>" name="alterarNomeBicho" id="alterarNomeBicho" type="text" class="input" />
+              <input placeholder="<?php echo $dadosBicho['nome']; ?>" name="alterarNomeBicho" id="alterarNomeBicho" type="text" class="input" />
             </div>
             <div class="btnvini d-flex gap-2 mt-2">
               <label for="alterarImagemBicho">Alterar imagem</label>
@@ -82,7 +59,7 @@ if (isset($_SESSION['logado']) == true) :
             <div class="d-flex mt-2 gap-2">
               <label for="">Descrição</label>
               <div class="btn-style">
-                <textarea placeholder="<?php echo "$dadosDescricao[0]"; ?>" name="alterarDescricao" id="alterarDescricao" rows="4" class="input"></textarea>
+                <textarea placeholder="<?php echo $dadosBicho['descricao']; ?>" name="alterarDescricao" id="alterarDescricao" rows="4" class="input"></textarea>
                 <button type="submit" name="btn-editar-adocao" class="btn btn-ctt centralizar mt-2">Editar</button>
               </div>
             </div>

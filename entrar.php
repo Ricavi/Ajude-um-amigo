@@ -8,7 +8,7 @@ if (isset($_POST['btn-entrar'])) :
 
 	$email = $_POST['emaillogin'];
 	$senha = $_POST['senhalogin'];
-	$url = "http://localhost/Ajude-um-amigo/TreadSingle.php?email=$email";
+	$url = "http://localhost/Ajudeumamigo/TreadSingle.php?email=$email";
 	//json_decode - Função que analisa a string codificada JSON e converte-a em uma variável do PHP.
 	//file_get_contents -  Função que lê todo o conteúdo de um arquivo para uma String
 	$resultado = json_decode(file_get_contents($url));
