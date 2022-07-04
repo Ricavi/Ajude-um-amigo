@@ -42,7 +42,7 @@ require_once "titulo.php";
               </div>
             </div>
             <div class="d-flex meta justify-content-around align-items-center distancia charles">
-              <img src="<?php echo $dadosAnimal['diretorio']; ?>" alt="" class="" />
+              <img src="<?php echo $dadosAnimal['diretorio']; ?>" alt="" class="btnAddImg" />
               <div class="textTamanho btn-style ">
                 <h1 class="centralizarCard subtitulo">
                   <?php

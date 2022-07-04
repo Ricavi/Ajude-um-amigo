@@ -5,24 +5,29 @@
         </button>
         <ul id="menu" role="menu">
             <li><a href="./index">Inicio</a></li>
-            <?php if (isset($_SESSION['logado']) == false) : ?>
-                <li><a href="./login">Login</a></li>
-                <li><a href="./cadastro">Cadastrar</a></li>
-            <?php endif;
-            ?>
             <li><a href="./amigos">Amigos</a></li>
-            <li><a id="infoBtn">Quem Somos</a></li>
-            <li><a href="./contatos">Contato</a></li>
-            <?php if (isset($_SESSION['logado']) == true) : ?>
+            <?php if (isset($_SESSION['logado'])) { ?>
                 <li><a href="./adocoesCriadas">Minhas adoções</a></li>
+            <?php }
+            ?>
+            <li><a href="./contatos">Contato</a></li>
+            <?php if (isset($_SESSION['logado'])) { ?>
                 <li><a href="./logout">logout</a></li>
-            <?php endif;
+            <?php }
             ?>
         </ul>
     </nav>
     <div class="loginDiv">
-        <a href="./login"><i class="bi bi-person-circle loginIcon"></i>
-            <p class="logintxt">Login/Cadastro</p>
-        </a>
+        <?php if (!(isset($_SESSION['logado']))) { ?>
+            <a href="./login"><i class="bi bi-person-circle loginIcon"></i>
+            <?php } else { ?>
+                <a href="./adocoesCriadas"><i class="bi bi-person-circle loginIcon"></i>
+                <?php } ?>
+                <p class="logintxt">
+                    <?php if (!(isset($_SESSION['logado']))) { ?>Login/Cadastro
+                <?php } else {
+                        echo strtok($_SESSION['nome_user'], " ");
+                    } ?></p>
+                </a>
     </div>
 </header>

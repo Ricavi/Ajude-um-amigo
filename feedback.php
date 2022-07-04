@@ -1,5 +1,5 @@
 <?php
-//se existe a sessão mensagem criada
+//todas as mensagens são guardadas no $_session[mensagem]
 if (isset($_SESSION['mensagem'])) :
 ?>
 	<div class="position-fixed top-0 end-0 p-3 " style="z-index: 11">

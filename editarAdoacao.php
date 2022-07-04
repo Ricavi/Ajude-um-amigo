@@ -13,14 +13,17 @@ if (isset($_SESSION['logado']) == true) :
 
     //Verificar se o fk_id de bichinhos é igual o da SESSION
     //conexão com o banco de dados
-    //id do bichinho
     //Armazenar o id do bicho na sessão
-
     //variaveis do banco de dados
     $idPost = $_POST['id'];
     $idUser = $_SESSION['id_user'];
     $sqlBicho = "SELECT * FROM bichinho WHERE id='$idPost'";
     $dadosBicho = mysqli_fetch_array(mysqli_query($connect, $sqlBicho));
+    $_SESSION['id_bicho'] = $dadosBicho['id'];
+    $_SESSION['nome_bicho'] = $dadosBicho['nome'];
+    $_SESSION['diretorio'] = $dadosBicho['diretorio'];
+
+
     ?>
 
 

@@ -9,6 +9,7 @@ class POST{
 
 	public $senha;
 	public $email;
+	public $nome;
 
 	public function __construct($db){
 		$this->conn = $db;
@@ -16,7 +17,7 @@ class POST{
 
     public function read(){
 		//Criando query
-		$query = 'SELECT id,senha, email FROM ' . $this->table . ' ORDER BY id ASC';
+		$query = 'SELECT id, senha, email, nome FROM ' . $this->table . ' ORDER BY id ASC';
 		
 		//Preparando a execução da consulta
 		$stmt = $this->conn->prepare($query);
@@ -30,7 +31,7 @@ class POST{
 
     public function read_single(){
 		//Criando query
-		$query = 'SELECT senha, id FROM ' . $this->table . ' WHERE email = ? LIMIT 1';
+		$query = 'SELECT senha, id, nome FROM ' . $this->table . ' WHERE email = ? LIMIT 1';
 		
 		//Preparando a execução da consulta
 		$stmt = $this->conn->prepare($query);
@@ -44,6 +45,7 @@ class POST{
 		if($row['senha']!=null){
 		$this->senha = $row['senha'];
 		$this->id = $row['id'];
+		$this->nome = $row['nome'];
 	} else {
 		$_SESSION['mensagem'] = "E-mail inválido!";
 		header('Location:login.php');
@@ -87,6 +89,7 @@ class POST{
 		//binding of parameters
 		$stmt->bindParam(':email', $this->email);
 		$stmt->bindParam(':id', $this->id);
+		$stmt->bindParam(':nome', $this->nome);
 		
 		//execute the query
 		if($stmt->execute()){

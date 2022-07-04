@@ -22,25 +22,14 @@ require_once "titulo.php"; ?>
         </div>
         <div class="d-flex mt-2 text-nowrap">
           <label for="cpf">CPF</label>
-
-
-
-
           <input type="text" class="input-group" minlength="11" maxlength="11" name="txtCPF" id="txtCPF" autofocus="" title="Informe os onze dígitos do número do CPF." required>
-
-
-
-
-
-
-
-
         </div>
         <div class="d-flex mt-2">
           <label for="password">Senha</label>
           <input type="password" class="input-group" name="senha" id="senha" minlength="8" required>
         </div>
         <div class="btn-style">
+        <div class="linkCadastro"><a href="./login">Fazer login</a></div>
           <button type="submit" name="btn-cadastrar" class="btn btn-ctt centralizar mt-5" id="toastbtn">Cadastrar</button>
         </div>
       </form>

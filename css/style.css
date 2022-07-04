@@ -327,12 +327,18 @@ ul {
 }
 
 footer a {
-  color: white !important;
-  text-decoration: none !important;
+  color: white;
+}
+footer a:hover{
+  color: white;
 }
 
-a:hover {
-  background: rgba(0, 0, 0, 0.05);
+div a {
+  text-decoration: none;
+}
+
+div a:hover {
+  text-decoration: none;
 }
 
 #header {
@@ -400,6 +406,12 @@ a:hover {
   padding: 1rem 0;
   margin: 0 1rem;
   border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  color: white;
+  text-decoration: none
+}
+
+#menu a:hover {
+  background: rgba(0, 0, 0, 0.05);
 }
 
 #btn-mobile {
@@ -572,3 +584,6 @@ flex-wrap: wrap;
   width: auto;
 }
 
+.linkCadastro {
+  text-align: right;
+}

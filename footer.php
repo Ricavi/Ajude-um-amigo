@@ -1,11 +1,11 @@
 <footer>
   <div>
-    <h1>Funcionalidades</h1>
-    <li><a href="./amigos">Amigos</a></li>
+    <h1>Página inicial</h1>
+    <li><a href="./index">Amigo do dia</a></li>
   </div>
   <div>
-    <h1>Quem somos</h1>
-    <li><a href="./index">Sobre nós</a></li>
+    <h1>Funcionalidades</h1>
+    <li><a href="./amigos">Amigos</a></li>
   </div>
 
   <div>

@@ -11,6 +11,7 @@ if (isset($_SESSION['logado']) == true) :
   <body>
     <?php require_once "navBar.php";
     require_once "feedback.php";
+    require_once "confirmarExclusao.php";
     ?>
     <section class="fundo">
       <h1 class="titulo">Adoções criadas</h1>
@@ -30,17 +31,18 @@ if (isset($_SESSION['logado']) == true) :
         $idUser = $_SESSION['id_user'];
 
         if ($idUser == 1) {
-          $sqlBicho = "SELECT * FROM bichinho";
+          $sqlBicho =
+            $sqlBicho = "SELECT * FROM bichinho";
           $dadosBicho = mysqli_fetch_array(mysqli_query($connect, $sqlBicho));
         } else {
           $sqlBicho = "SELECT * FROM bichinho WHERE fk_id='$idUser'";
           $dadosBicho = mysqli_fetch_array(mysqli_query($connect, $sqlBicho));
           $_SESSION['id_bicho'] = $dadosBicho;
         }
-          //Fazer o indice
-          //Fazer um botão para aumentar o indice até o count de cima
-          $bichos = mysqli_query($connect, $sqlBicho);
-        
+        //Fazer o indice
+        //Fazer um botão para aumentar o indice até o count de cima
+        $bichos = mysqli_query($connect, $sqlBicho);
+
 
         ?>
         <div class="VAIDARCERTO container">
@@ -60,22 +62,17 @@ if (isset($_SESSION['logado']) == true) :
                 </p>
                 <div class="d-flex justify-content-around">
                   <form action="editarAdoacao.php" method="POST">
-
-
                     <button name="btn-editar" class="btn btn-editar ">
                       <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
-
                       <i class="bi bi-pencil-fill tamanhoIcons"></i>
                     </button>
                   </form>
 
 
-                  <form action="deletar.php" method="POST">
+                  <button type="button" class="btn btn-delete" data-bs-toggle="modal" data-bs-target="#myModal">
                     <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
-                    <button name="btn-delete" class="btn btn-delete">
-                      <i class="bi bi-trash3-fill tamanhoIcons"></i>
-                    </button>
-                  </form>
+                    <i class="bi bi-trash3-fill tamanhoIcons"></i>
+                  </button>
 
 
                 </div>

@@ -1,11 +1,16 @@
 <?php
 session_start();
 require_once 'dbconnect.php';
+$idPost = $_POST['id'];
+$sqlDiretorio = "SELECT diretorio FROM bichinho WHERE id='$idPost'";
+    $dadosDiretorio = mysqli_fetch_array(mysqli_query($connect, $sqlDiretorio));
+echo $dadosDiretorio[0];
 if (isset($_POST['btn-delete'])) :
     $idPost = $_POST['id'];
     $sqlDeletar = "DELETE FROM bichinho WHERE id='$idPost'";
     $sqlDiretorio = "SELECT diretorio FROM bichinho WHERE id='$idPost'";
     $dadosDiretorio = mysqli_fetch_array(mysqli_query($connect, $sqlDiretorio));
+    echo mysqli_query($connect, $sqlDeletar);
     //Deletar diretorio
 
     if (unlink("$dadosDiretorio[0]")) :
@@ -23,3 +28,4 @@ if (isset($_POST['btn-delete'])) :
         header('Location:adocoesCriadas');
     endif;
 endif;
+?>

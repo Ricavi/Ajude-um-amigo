@@ -3,7 +3,7 @@ session_start();
 require_once 'dbconnect.php';
 require_once "head.php";
 require_once "head.php";
-$nomePagina="Login";
+$nomePagina = "Login";
 require_once "titulo.php"; ?>
 
 <body>
@@ -25,8 +25,8 @@ require_once "titulo.php"; ?>
           <div class="d-flex gap-4 mt-2 btn-style">
             <label for="">Senha</label>
             <div>
-              <input type="hidden" name="" value="">
               <input type="password" class="input" name="senhalogin" id="senhalogin">
+              <div class="linkCadastro"><a href="./cadastro">Fazer cadastro</a></div>
               <button type="submit" name="btn-entrar" class="btn btn-ctt centralizar mt-5">Logar</button>
             </div>
           </div>

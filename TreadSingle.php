@@ -20,7 +20,8 @@ $post -> read_single();
 //monta o array que será retornado.
 $post_arr= array(
 	'senha' => $post->senha,
-	'id' => $post->id
+	'id' => $post->id,
+	'nome' => $post->nome
 );
 
 //imprime o JSON
