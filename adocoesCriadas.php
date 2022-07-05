@@ -11,7 +11,6 @@ if (isset($_SESSION['logado']) == true) :
   <body>
     <?php require_once "navBar.php";
     require_once "feedback.php";
-    require_once "confirmarExclusao.php";
     ?>
     <section class="fundo">
       <h1 class="titulo">Adoções criadas</h1>
@@ -24,15 +23,12 @@ if (isset($_SESSION['logado']) == true) :
               </button>
             </a>
           </div>
-
         </div>
-
         <?php
         $idUser = $_SESSION['id_user'];
 
         if ($idUser == 1) {
-          $sqlBicho =
-            $sqlBicho = "SELECT * FROM bichinho";
+          $sqlBicho = "SELECT * FROM bichinho";
           $dadosBicho = mysqli_fetch_array(mysqli_query($connect, $sqlBicho));
         } else {
           $sqlBicho = "SELECT * FROM bichinho WHERE fk_id='$idUser'";
@@ -68,9 +64,9 @@ if (isset($_SESSION['logado']) == true) :
                     </button>
                   </form>
 
-
-                  <button type="button" class="btn btn-delete" data-bs-toggle="modal" data-bs-target="#myModal">
-                    <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
+                  <?php require_once "confirmarExclusao.php"; ?>
+                  <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
                     <i class="bi bi-trash3-fill tamanhoIcons"></i>
                   </button>
 

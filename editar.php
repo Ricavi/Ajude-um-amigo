@@ -18,31 +18,31 @@ if (isset($_POST['btn-editar-adocao'])) :
         endif;
 
     else :
-        //Nome não foi alterado
-        echo "Nome vazio";
+        $_SESSION['mensagem'] = "Nome vazio";
+        header('Location:adocoesCriadas');
     endif;
 
     if (!empty($descricao)) :
-    //verifica se foi colocado um novo nome
-    $sql = "UPDATE `bichinho` SET `descricao` = '$descricao' WHERE `diretorio` = '$diretorioDeletar[0]' or `id`='$sqlBichoId[0]'";
-    if (mysqli_query($connect, $sql)) :
-    endif;
+        //verifica se foi colocado uma nova descrição
+        $sql = "UPDATE `bichinho` SET `descricao` = '$descricao' WHERE `diretorio` = '$diretorioDeletar[0]' or `id`='$sqlBichoId[0]'";
+        if (mysqli_query($connect, $sql)) :
+        endif;
 
     else :
-        //Nome não foi alterado
-        echo "descrição vazio";
+        $_SESSION['mensagem'] = "descrição vazio";
+        header('Location:adocoesCriadas');
     endif;
 
 
 
 
 
-    if ($_FILES['alterarImagemBicho']['size']!=0) :
+    if ($_FILES['alterarImagemBicho']['size'] != 0) :
         //verifica se o diretorio foi alterada
         if (unlink($diretorioDeletar[0])) :
-            echo "DELETADO";
+
         else :
-            echo "Não conseguimos";
+
         endif;
         //AQUI
 
@@ -69,12 +69,15 @@ if (isset($_POST['btn-editar-adocao'])) :
 
 
             if (move_uploaded_file($temporario, $pasta . $pastaUsuario . $novoNome)) :
-                $mensagem = "Upload feito com sucesso";
+                $_SESSION['mensagem'] = "Alterações efetuadas";
+                header('Location:adocoesCriadas');
             else :
-                $mensagem = "Não consegui realizar o upload!";
+                $_SESSION['mensagem'] = "Erro ao realizar operação";
+                header('Location:adocoesCriadas');
             endif;
         else :
-            $mensagem = "Formato inválido";
+            $_SESSION['mensagem'] = "Formato de arquivo inválido";
+            header('Location:adocoesCriadas');
         endif;
         $diretorio = "imgBichos/$idUser/$novoNome";
         $sql = "UPDATE `bichinho` SET `diretorio` = '$diretorio' WHERE `diretorio` = '$diretorioDeletar[0]' or `id`='$sqlBichoId[0]'";
@@ -85,13 +88,14 @@ if (isset($_POST['btn-editar-adocao'])) :
 
 
     else :
-    //descrição não foi alterado
+        $_SESSION['mensagem'] = "Alterações efetuadas";
+        header('Location:adocoesCriadas');
     endif;
 
-//limpando sessão
-unset($_SESSION['nome_bicho']);
-unset($_SESSION['id_bicho']);
-unset($_SESSION['diretorio']);
+    //limpando sessão
+    unset($_SESSION['nome_bicho']);
+    unset($_SESSION['id_bicho']);
+    unset($_SESSION['diretorio']);
 
 
 endif;

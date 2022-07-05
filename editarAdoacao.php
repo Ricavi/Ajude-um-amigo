@@ -9,6 +9,7 @@ if (isset($_SESSION['logado']) == true) :
   <body>
     <?php require_once "navBar.php";
     require_once 'dbconnect.php';
+    require_once "feedback.php";
 
 
     //Verificar se o fk_id de bichinhos é igual o da SESSION
@@ -47,22 +48,16 @@ if (isset($_SESSION['logado']) == true) :
           <form action="editar.php" method="POST" enctype="multipart/form-data">
             <div class="d-flex gap-2">
               <label for="">Nome</label>
-              <input placeholder="<?php echo $dadosBicho['nome']; ?>" name="alterarNomeBicho" id="alterarNomeBicho" type="text" class="input" />
+              <input value="<?php echo $dadosBicho['nome']; ?>" name="alterarNomeBicho" id="alterarNomeBicho" type="text" class="input" />
             </div>
             <div class="btnvini d-flex gap-2 mt-2">
               <label for="alterarImagemBicho">Alterar imagem</label>
-              <input name="alterarImagemBicho" id="alterarImagemBicho" onchange="preview()" type="file" src="" accept=".jpg, .jpeg, .pnp, .avif">
-              <script>
-                function preview() {
-                  imagemPreview.src = URL.createObjectURL(event.target.files[0])
-                  //DEPOIS COLOCAR NO SCRIPT
-                }
-              </script>
+              <input value="<?php echo $dadosBicho['diretorio']; ?>" name="alterarImagemBicho" id="alterarImagemBicho" onchange="preview()" type="file" src="" accept=".jpg, .jpeg, .pnp, .avif">
             </div>
             <div class="d-flex mt-2 gap-2">
               <label for="">Descrição</label>
               <div class="btn-style">
-                <textarea placeholder="<?php echo $dadosBicho['descricao']; ?>" name="alterarDescricao" id="alterarDescricao" rows="4" class="input"></textarea>
+                <textarea name="alterarDescricao" id="alterarDescricao" rows="4" class="input"><?php echo trim($dadosBicho['descricao'])?></textarea>
                 <button type="submit" name="btn-editar-adocao" class="btn btn-ctt centralizar mt-2">Editar</button>
               </div>
             </div>

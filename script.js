@@ -28,18 +28,7 @@ window.onload = function () {
 };
 
 
-//scroll para seções
-let navBtn = $('.nav-item');
-let infoSection = $('#info');
-let scrolTo = '';
-
-$(navBtn).click(function(){
-  let btnID = $(this).attr('id');
-  if(btnId == 'info'){
-    scrolTo = infoSection;
-  }
-
-  $([document.documentElement, document.body]).animate({
-    scrollTop: $(scrollTo).offset().top - 70
-  }, 1500);
-})
+//mostrar a imagem quando editar/criar adoção
+function preview() {
+  imagemPreview.src = URL.createObjectURL(event.target.files[0])
+}
