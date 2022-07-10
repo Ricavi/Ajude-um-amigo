@@ -7,8 +7,9 @@ require_once 'dbconnect.php'; ?>
 
 
 <body>
-  <?php require_once "navBar.php"; ?>
-  <section class="fundo">
+  <?php require_once "navBar.php";
+  require_once "confirmarExclusao.php"; ?>
+  <section class="fundo padraoTela">
     <h1 class="titulo">Amigos</h1>
     <div>
       <div class="VAIDARCERTO1 justify-content-center">
@@ -42,7 +43,10 @@ require_once 'dbconnect.php'; ?>
                   echo $dados['descricao'];
                   ?>
                 </p>
-                <a href="chat"><button class="btn btn-am">Adotar</button></a>
+                <form action="http://localhost/Ajude-um-amigo/amigos?id=<?php $dados['id'] ?>" method="get">
+                <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
+                <button type="submit" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Adotar</button>
+              </form>
               </div>
             </div>
           </div>

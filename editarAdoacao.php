@@ -32,7 +32,7 @@ if (isset($_SESSION['logado']) == true) :
 
 
 
-    <section class="fundo">
+    <section class="fundo padraoTela">
       <h1 class="titulo">Editar adoção</h1>
       <div class="d-flex justify-content-around align-items-center container distancia">
         <div>

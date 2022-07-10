@@ -7,7 +7,7 @@ session_start();
 if (isset($_POST['btn-entrar'])) :
 	$email = $_POST['emaillogin'];
 	$senha = $_POST['senhalogin'];
-	$url = "http://localhost/Ajudeumamigo/TreadSingle.php?email=$email";
+	$url = "http://localhost/Ajude-um-amigo/TreadSingle.php?email=$email";
 	$resultado = json_decode(file_get_contents($url));
 
 	if (empty($email) or empty($senha)) :

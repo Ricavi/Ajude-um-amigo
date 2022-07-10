@@ -6,7 +6,7 @@ $password="usbw";
 $db_name="ajudeumamigo";
 
 //pdo - somente orientado objeto
-$connect =mysqli_connect($servername,$username,$password,$db_name);
+$connect = mysqli_connect($servername,$username,$password,$db_name);
 
 //codifica com o caracteres ao manipular dados do banco de dados
 //mysqli_set_charset($connect, "utf8");

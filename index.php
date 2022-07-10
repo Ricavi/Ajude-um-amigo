@@ -4,13 +4,13 @@ require_once "head.php";
 require_once 'dbconnect.php';
 $nomePagina = "Home";
 require_once "titulo.php";
-//curdate() para verificar a data do bicho do dia
-//verificar a data em um txt
 ?>
 
 <body>
   <?php require_once "navBar.php";
   require_once "feedback.php";
+  require_once "confirmarExclusao.php";
+  
 
   //Atualizar o "Amigo do dia"
   $sqlTempoBd = "SELECT * FROM `tempo`";
@@ -53,7 +53,7 @@ require_once "titulo.php";
                   echo $dadosAnimal['descricao'];
                   ?>
                 </p>
-                <a href="chat"><button class="btn btn-am">Adotar</button></a>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Adotar</button>
               </div>
             </div>
           </div>
