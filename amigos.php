@@ -9,7 +9,7 @@ require_once 'dbconnect.php'; ?>
 <body>
   <?php require_once "navBar.php";
   require_once "confirmarExclusao.php"; ?>
-  <section class="fundo padraoTela">
+  <section class="fundo">
     <h1 class="titulo">Amigos</h1>
     <div>
       <div class="VAIDARCERTO1 justify-content-center">

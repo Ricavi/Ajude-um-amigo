@@ -12,7 +12,7 @@ if (isset($_SESSION['logado']) == true) :
     <?php require_once "navBar.php";
     require_once "feedback.php";
     ?>
-    <section class="fundo padraoTela">
+    <section class="fundo">
       <h1 class="titulo">Adoções criadas</h1>
       <div class="viniCard container d-flex justify-content-around gap-3 ">
         <div class="card cartaoADD">
